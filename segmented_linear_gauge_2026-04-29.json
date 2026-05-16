@@ -1,0 +1,163 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "493220ce-c599-432e-a48c-65c78e14efe3",
+      "generated": "2026-04-29T19:38:01.855Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Segmented Linear Gauge",
+      "description": "A segmented linear gauge with overlays at the 20, 40, 60, and 80 percent marks",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\n  \"autosize\": {\n    \"type\": \"fit\",\n    \"resize\": true,\n    \"contains\": \"padding\"\n  },\n  \"view\": {\n    \"stroke\": null\n  },\n  // visual title\n  \"title\": {\n    \"font\": \"Segoe UI\",\n    \"fontSize\": 24,\n    \"fontWeight\": \"bold\",\n    \"fontStyle\": \"italic\",\n    \"color\": \"#4A4A4A\"\n  },\n  \"style\": {\n    \"_background_bar_style\": {\n      \"color\": \"#E3E3E3\"\n    },\n    \"_foreground_bar_style\": {\n      \"color\": {\n        \"expr\": \"pbiColor(0)\"\n      }\n    },\n    \"_segment_overlay_bar_style\": {\n      \"strokeWidth\": 10,\n      \"color\": \"white\"\n    },\n    \"_percentage_text_style\": {\n      \"font\": \"Segoe UI\",\n      \"fontSize\": 18,\n      \"fontWeight\": \"bold\", // normal, bold\n      \"fontStyle\": \"normal\", // normal, italic\n      \"color\": \"#4A4A4A\"\n    }\n  }\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Percentage",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Segmented Linear Gauge",
+    "author": "Greg Philps",
+    "date": "2026-04-29",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.153.910.0",
+    "description": "A segmented linear guage with overlays at the 20, 40, 60, and 80 percent marks",
+    "notes": "uses a 100% scale; overlays hard-coded to 20, 40, 60, and 80",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  // text and position only; formatting done in "config\title"
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Segmented Linear Gauge"
+  },
+  // set the visual size to fill the Power BI container
+  "width": "container",
+  "height": "container",
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign an internal field name to the dataset field
+    {
+      "calculate": "datum['__0__']",
+      "as": "_percentage"
+    },
+    {
+      "calculate": "100 * 1",
+      "as": "_100"
+    }
+  ],
+  // shared encoding outside of [layer] block
+  "encoding": {
+    "x": {
+      "type": "quantitative",
+      "axis": null,
+      // use a scale larger than 0-100 to leave space for the percentage text
+      "scale": {
+        "domain": [
+          0,
+          105
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "name": "BACKGROUND_PERCENT_BAR",
+      "mark": {
+        "type": "bar",
+        "style": "_background_bar_style"
+      },
+      "encoding": {
+        "x": {
+          "field": "_100"
+        }
+      }
+    },
+    {
+      "name": "FOREGROUND_PERCENT_BAR",
+      "mark": {
+        "type": "bar",
+        "style": "_foreground_bar_style"
+      },
+      "encoding": {
+        "x": {
+          "field": "_percentage"
+        }
+      }
+    },
+    {
+      "name": "SEGMENT_OVERLAY_BARS",
+      // hard-coded data for overlay markers
+      "data": {
+        "values": [
+          {
+            "_id": 1,
+            "_overlay": 20
+          },
+          {
+            "_id": 2,
+            "_overlay": 40
+          },
+          {
+            "_id": 3,
+            "_overlay": 60
+          },
+          {
+            "_id": 4,
+            "_overlay": 80
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "style": "_segment_overlay_bar_style"
+      },
+      "encoding": {
+        "x": {
+          "field": "_overlay"
+        }
+      }
+    },
+    {
+      "name": "PERCENT_TEXT",
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "xOffset": 4,
+        "style": "_percentage_text_style"
+      },
+      "encoding": {
+        "text": {
+          "field": "_percentage"
+        },
+        "x": {
+          "datum": 100
+        }
+      }
+    }
+  ]
+}

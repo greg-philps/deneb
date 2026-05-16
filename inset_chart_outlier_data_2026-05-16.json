@@ -1,0 +1,421 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "f399765c-faf0-4cb6-b81f-b60cd339f055",
+      "generated": "2026-05-16T12:58:27.054Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Deneb Inset Chart - Outlier Data",
+      "description": "An inset chart to prevent outliers from overwhelming data differences and to improve visual comparisons between categories as compared to a full range bar chart",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"autosize\": {\r\n    \"type\": \"fit\",\r\n    \"contains\": \"padding\"\r\n  },\r\n  // horizontally-concatenated section titles\r\n  \"title\": {\r\n    \"font\": \"Segoe UI\",\r\n    \"fontSize\": 14,\r\n    \"fontWeight\": \"bold\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#4A4A4A\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 12,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#969696\"\r\n  },\r\n  \"axisX\": {\r\n    \"title\": false,\r\n    \"ticks\": true,\r\n    \"domain\": true,\r\n    \"domainColor\": \"#A3A3A3\",\r\n    \"offset\": 4,\r\n    \"grid\": true,\r\n    \"gridColor\": \"#EEEEEE\",\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 10,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#4A4A4A\"\r\n  },\r\n  \"axisY\": {\r\n    \"title\": false,\r\n    \"ticks\": false,\r\n    \"domain\": false,\r\n    \"domainWidth\": 2,\r\n    \"domainColor\": \"#A3A3A3\",\r\n    \"grid\": false,\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 16,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#4A4A4A\"\r\n  },\r\n  \"style\": {\r\n    \"_normal_bar_style\": {\r\n      \"cornerRadiusEnd\": 4,\r\n      \"opacity\": 0.6\r\n    },\r\n    \"_inset_bar_style\": {\r\n      \"opacity\": 1\r\n    },\r\n    \"_inset_gradient_bar_style\": {\r\n      \"opacity\": 1\r\n    },    \r\n    \"_normal_data_label_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 14,\r\n      \"fontWeight\": \"normal\",\r\n      \"fontStyle\": \"normal\"\r\n    },\r\n    \"_inset_data_label_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 14,\r\n      \"fontWeight\": \"normal\",\r\n      \"fontStyle\": \"normal\",\r\n      \"color\": \"#4A4A4A\"\r\n    }\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__1__",
+        "name": "Category Name",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__2__",
+        "name": "Category Value",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Inset Chart - Similar Data",
+    "author": "Greg Philps",
+    "date": "2026-05-16",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.153.1206.0",
+    "description": "An inset chart to prevent outliers from overwhelming data differences and to improve visual comparisons between categories as compared to a full range bar chart",
+    "notes": "syntax not found for dynamic width or inset start or gradient inset start or end ... adjust to suit dataset",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Inset Chart - Outlier Data",
+    "subtitle": [
+      "Countries by Area (selected countries only)",
+      "Data Source: Wikipedia, 2025-05-26",
+      "URL: https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area"
+    ],
+    "offset": 20,
+    "font": "Segoe UI",
+    "fontSize": 24,
+    "fontWeight": "bold",
+    "fontStyle": "italic",
+    "color": "#4A4A4A",
+    "subtitleFont": "Segoe UI",
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": "normal",
+    "subtitleFontStyle": "italic",
+    "subtitleColor": "#969696"
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal field to identify dataset
+    {
+      "calculate": "1",
+      "as": "_DEV_ID"
+    },
+    // assign an internal field name to the dataset field
+    {
+      "calculate": "datum['__1__']",
+      "as": "_category"
+    },
+    {
+      "calculate": "datum['__2__']",
+      "as": "_category_value"
+    },
+    // determine the rank for use in the display order    
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "_category_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "_category_value",
+          "order": "descending"
+        }
+      ]
+    },
+    // set a composite label
+    {
+      "calculate": "pad( datum['_category_rank'], 2, '0', 'left' ) + '-' + datum['_category']",
+      "as": "_category_rank_category_name_label"
+    },
+    // get the min and max data values
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "_category_value",
+          "as": "_max_category_value"
+        },
+        {
+          "op": "min",
+          "field": "_category_value",
+          "as": "_min_category_value"
+        }
+      ]
+    },
+    {
+      "calculate": "datum['_max_category_value'] * 0.8",
+      "as": "_normal_threshold_value"
+    },
+    {
+      "calculate": "datum['_category_value'] < datum['_normal_threshold_value']",
+      "as": "_below_normal_threshold_value"
+    },
+    {
+      "calculate": "if( datum['_category_rank'] == ( _outliers + 1 ), datum['_category_value'], null )",
+      "as": "_inset_non_outlier_category_value"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "_inset_non_outlier_category_value",
+          "as": "_max_inset_non_outlier_category_value"
+        }
+      ]
+    },
+    {
+      "calculate": "if( datum['_category_rank'] <= _outliers, datum['_max_inset_non_outlier_category_value'] + 5000, datum['_category_value'] )",
+      "as": "_inset_chart_category_value"
+    },
+    {
+      "calculate": "datum['_max_inset_non_outlier_category_value'] * 0.8",
+      "as": "_inset_threshold_value"
+    },
+    {
+      "calculate": "datum['_category_value'] < datum['_inset_threshold_value']",
+      "as": "_below_inset_threshold_value"
+    }
+  ],
+  "params": [
+    {
+      "name": "_bar_colour",
+      "expr": "pbiColor(2)"
+    },
+    // use an expression for the gradient colour to permit use of a dynamic colour
+    {
+      "name": "_bar_gradient_colour",
+      "expr": "{x1: 0, y0: 0, x2: 1, y2: 0, gradient: 'linear', stops: [{ offset: 0, color: _bar_colour }, { offset: 1, color: 'white' }]}"
+    },
+    {
+      "name": "_inset_chart_upper_value",
+      "expr": "data('data_0')[_outliers]['_inset_chart_category_value']"
+    },
+    // NOTE: add 5000 to enforce roundUp
+    {
+      "name": "_inset_chart_upper_value2",
+      "expr": "toNumber( format( _inset_chart_upper_value + 5000, '.2r' ) )"
+    },
+    {
+      "name": "_outliers",
+      "value": 2,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "name": "Outliers: "
+      }
+    }
+  ],
+  "spacing": 10,
+  "hconcat": [
+    {
+      "name": "NORMAL_CHART",
+      // text and position only; formatting done in "config\title"
+      "title": {
+        "text": "Normal Chart",
+        "subtitle": "Full Range",
+        "offset": 4
+      },
+      // adjust to suit desired visual size
+      // Future Development: investigate how to use an expression of width here
+      "width": 450,
+      "height": 470,
+      "encoding": {
+        "y": {
+          "field": "_category_rank_category_name_label",
+          "type": "nominal",
+          "sort": "-x",
+          "axis": {
+            "title": null,
+            "offset": 4,
+            "labelExpr": "slice( datum.value, 3, 100 )"
+          }
+        },
+        "x": {
+          "field": "_category_value",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "labelFlush": false,
+            "formatType": "pbiFormat",
+            "format": "0,,.# M"
+          }
+        }
+      },
+      "layer": [
+        {
+          "name": "NORMAL_BAR",
+          "mark": {
+            "type": "bar",
+            "color": {
+              "expr": "_bar_colour"
+            },
+            "style": "_normal_bar_style",
+            // *** DEV ONLY ***
+            "tooltip": {
+              "content": "data"
+            }
+          }
+        },
+        {
+          "name": "NORMAL_DATA_LABEL",
+          "mark": {
+            "type": "text",
+            "align": {
+              "expr": "if( datum['_below_normal_threshold_value'] == true, 'left', 'right' )"
+            },
+            "xOffset": {
+              "expr": "if( datum['_below_normal_threshold_value'] == true, 4, -4 )"
+            },
+            "color": {
+              "expr": "if( datum['_below_normal_threshold_value'] == true, 'black', 'white' )"
+            },
+            "style": "_normal_data_label_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_category_value",
+              "type": "quantitative",
+              "formatType": "pbiFormat",
+              // adjust Power BI format string to suit dataset 
+              "format": "#,. K"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "INSET_CHART",
+      // text and position only; formatting done in "config\title"
+      "title": {
+        "text": "Inset Chart",
+        "subtitle": "Truncated Range",
+        "offset": 0
+      },
+      // adjust to suit desired visual size
+      // Future Development: investigate how to use an expression of width here
+      "width": 450,
+      "height": 470,
+      "encoding": {
+        "y": {
+          "field": "_category_rank_category_name_label",
+          "type": "nominal",
+          "sort": "-x",
+          "axis": null
+        },
+        "x": {
+          "field": "_category_value",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "labelFlush": false,
+            "formatType": "pbiFormat",
+            // adjust Power BI format string to suit dataset 
+            "format": "0,.# K"
+          },
+          "scale": {
+            "domain": [
+              0,
+              // adjust scale to suit dataset
+              {
+                "expr": "_inset_chart_upper_value2 + 50000"
+              }
+            ]
+          }
+        }
+      },
+      "layer": [
+        {
+          "name": "INSET_BAR",
+          "mark": {
+            "type": "bar",
+            "color": {
+              "expr": "_bar_colour"
+            },
+            "height": {
+              "band": 0.8
+            },
+            // restrict the domain to the specified range
+            "clip": true,
+            "style": "_inset_bar_style",
+            // *** DEV ONLY ***
+            "tooltip": {
+              "content": "data"
+            }
+          }
+        },
+        {
+          "name": "INSET_GRADIENT_BAR",
+          "transform": [
+            // assign internal field to identify dataset
+            {
+              "calculate": "2",
+              "as": "_DEV_ID"
+            },
+            {
+              "filter": "datum['_category_rank'] <= _outliers"
+            }
+          ],
+          "mark": {
+            "type": "bar",
+            "color": {
+              "expr": "_bar_gradient_colour"
+            },
+            "height": {
+              "band": 0.8
+            },
+            "style": "_inset_gradient_bar_style"
+          },
+          "encoding": {
+            // adjust to suit dataset
+            "x": {
+              "datum": {
+                "expr": "_inset_chart_upper_value"
+              }
+            },
+            // adjust to suit dataset
+            "x2": {
+              "datum": {
+                "expr": "_inset_chart_upper_value2 + 50000"
+              }
+            }
+          }
+        },
+        {
+          "name": "INSET_DATA_LABEL",
+          "transform": [
+            // assign internal field to identify dataset
+            {
+              "calculate": "3",
+              "as": "_DEV_ID"
+            },
+            {
+              "calculate": "if( datum['_category_rank'] > _outliers, true, false )",
+              "as": "_above_outlier_rank"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": {
+              "expr": "if( datum['_above_outlier_rank'] == true, 'left', 'right' )"
+            },
+            "xOffset": {
+              "expr": "if( datum['_above_outlier_rank'] == true, 4, -4 )"
+            },
+            "color": {
+              "expr": "if( datum['_above_outlier_rank'] == true, 'black', 'white' )"
+            },
+            "style": "_inset_data_label_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_category_value",
+              "type": "quantitative",
+              "formatType": "pbiFormat",
+              // adjust Power BI format string to suit dataset
+              "format": "0,. K"
+            },
+            "x": {
+              "field": "_inset_chart_category_value",
+              "type": "quantitative"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

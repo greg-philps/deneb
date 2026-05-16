@@ -1,0 +1,253 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "3aadfc19-96b2-40f1-96b6-e284e5b99160",
+      "generated": "2026-05-01T17:49:58.376Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Temperature Gauge",
+      "description": "A bulb-and-gauge visual with temperature-dependent 4-colour fill using Power BI theme colours",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": true,
+      "selectionMode": "simple",
+      "highlight": true,
+      "dataPointLimit": 50
+    },
+    "config": "{\n  \"autosize\": {\n    \"type\": \"fit\",\n    \"resize\": true,\n    \"contains\": \"padding\"\n  },\n  \"view\": {\n    \"stroke\": null\n  },\n  // visual title\n  \"title\": {\n    \"font\": \"Segoe UI\",\n    \"fontSize\": 24,\n    \"fontWeight\": \"bold\",\n    \"fontStyle\": \"italic\",\n    \"color\": \"#4A4A4A\"\n  },\n  \"axisQuantitative\": {\n    \"tickCount\": 8,\n    \"grid\": true,\n    \"gridColor\": \"#C8C6C4\",\n    \"gridDash\": [\n      1,\n      5\n    ],\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 14,\n    \"labelFontWeight\": \"normal\", // normal, bold\n    \"labelFontStyle\": \"italic\", // normal, italic\n    \"labelColor\": \"#4A4A4A\"\n  },\n  \"style\": {\n    \"_temperature_text_style\": {\n      \"font\": \"Segoe UI\",\n      \"fontSize\": 24,\n      \"fontWeight\": \"bold\", // normal, bold\n      \"fontStyle\": \"normal\", // normal, italic\n      \"color\": \"white\"\n    }\n  }\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__1__",
+        "name": "Range",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__2__",
+        "name": "Min",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__3__",
+        "name": "Max",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__4__",
+        "name": "Temperature",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Thermometer Gauge",
+    "author": "Greg Philps",
+    "date": "2026-05-01",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.153.910.0",
+    "description": "A bulb-and-gauge visual with temperature-dependent 4-colour fill using Power BI theme colours",
+    "notes": "uses a dataset-based scale scale",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  // text and position only; formatting done in "config\title"
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Thermometer Gauge"
+  },
+  // set the visual size to fill the Power BI container
+  "width": "container",
+  "height": "container",
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // use an internal development ID for easy dataset identification
+    {
+      "calculate": "1",
+      "as": "_DEV_ID"
+    },
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_id"
+    },
+    {
+      "calculate": "datum['__1__']",
+      "as": "_range"
+    },
+    {
+      "calculate": "datum['__2__']",
+      "as": "_range_min"
+    },
+    {
+      "calculate": "datum['__3__']",
+      "as": "_range_max"
+    },
+    {
+      "calculate": "datum['__4__']",
+      "as": "_temperature"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "min",
+          "field": "_range_min",
+          "as": "_min_scale"
+        },
+        {
+          "op": "max",
+          "field": "_range_max",
+          "as": "_max_scale"
+        }
+      ]
+    },
+    {
+      "calculate": "if( datum['_temperature'] >= datum['_range_min'] && datum['_temperature'] <= datum['_range_max'], datum['_range'] == 'Freezing' ? pbiColor(1) : datum['_range'] == 'Cold' ? pbiColor(3) : datum['_range'] == 'Nice' ? pbiColor(5) : datum['_range'] == 'Hot' ? pbiColor(7) : null, null )",
+      "as": "_gauge_colour"
+    },
+    {
+      "calculate": "datum['_max_scale'] - datum['_min_scale']",
+      "as": "range_scale"
+    },
+    {
+      "calculate": "datum['_min_scale'] - 6",
+      "as": "_bulb_center"
+    },
+    {
+      "filter": "datum['_gauge_colour'] != null"
+    }
+  ],
+  "params": [
+    // adjust border width and colour as desired
+    {
+      "name": "_border_width",
+      "value": 10
+    },
+    {
+      "name": "_border_color",
+      "value": "#E3E3E3"
+    }
+  ],
+  // shared encoding
+  "encoding": {
+    "y": {
+      "type": "quantitative",
+      "axis": {
+        "title": null
+      }
+    }
+  },
+  "layer": [
+    {
+      "name": "GAUGE_BORDER",
+      "mark": {
+        "type": "bar",
+        "width": 60,
+        "filled": false,
+        "stroke": {
+          "expr": "_border_color"
+        },
+        "strokeWidth": {
+          "expr": "_border_width"
+        },
+        "cornerRadiusTopLeft": 1,
+        "cornerRadiusTopRight": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "_min_scale"
+        },
+        "y2": {
+          "field": "_max_scale"
+        }
+      }
+    },
+    {
+      "name": "BULB_FILL",
+      "mark": {
+        "type": "circle",
+        "size": 10000,
+        "stroke": {
+          "expr": "_border_color"
+        },
+        "strokeWidth": {
+          "expr": "_border_width"
+        },
+        "color": {
+          "expr": "datum['_gauge_colour']"
+        },
+        "opacity": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "_bulb_center"
+        }
+      }
+    },
+    {
+      "name": "GAUGE_FILL",
+      "mark": {
+        "type": "bar",
+        "width": 50,
+        "color": {
+          "expr": "datum['_gauge_colour']"
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "_min_scale"
+        },
+        "y2": {
+          "field": "_temperature"
+        }
+      }
+    },
+    {
+      "name": "TEMPERATURE",
+      "mark": {
+        "type": "text",
+        "baseline": "top", // top, middle, bottom
+        "yOffset": 4,
+        "style": "_temperature_text_style"
+      },
+      "encoding": {
+        "text": {
+          "field": "_temperature",
+          "type": "quantitative",
+          "formatType": "pbiFormat",
+          "format": "#"
+        },
+        "y": {
+          "field": "__4__"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "a866e3db-e4c1-4efe-b8e5-49fc831a739d",
+      "generated": "2026-05-15T14:09:09.972Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+      "name": "Deneb Inset Chart - Similar Data",
+      "description": "An inset chart to accentuate differences between similar data that can be hard to discern in a full range bar chart",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"autosize\": {\r\n    \"type\": \"fit\",\r\n    \"contains\": \"padding\"\r\n  },\r\n  // horizontally-concatenated section titles\r\n  \"title\": {\r\n    \"font\": \"Segoe UI\",\r\n    \"fontSize\": 14,\r\n    \"fontWeight\": \"bold\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#4A4A4A\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 12,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#969696\"\r\n  },\r\n  \"axisX\": {\r\n    \"title\": false,\r\n    \"ticks\": true,\r\n    \"domain\": true,\r\n    \"domainColor\": \"#A3A3A3\",\r\n    \"offset\": 4,\r\n    \"grid\": true,\r\n    \"gridColor\": \"#EEEEEE\",\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 10,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#4A4A4A\"\r\n  },\r\n  \"axisY\": {\r\n    \"title\": false,\r\n    \"ticks\": false,\r\n    \"domain\": false,\r\n    \"domainWidth\": 2,\r\n    \"domainColor\": \"#A3A3A3\",\r\n    \"grid\": false,\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 16,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#4A4A4A\"\r\n  },\r\n  \"style\": {\r\n    \"_normal_bar_style\": {\r\n      \"cornerRadiusEnd\": 4,\r\n      \"opacity\": 0.6\r\n    },\r\n    \"_inset_bar_style\": {\r\n      \"cornerRadiusTopRight\": 4,\r\n      \"cornerRadiusBottomRight\": 4,\r\n      \"opacity\": 1\r\n    },\r\n    \"_inset_gradient_bar_style\": {\r\n      \"opacity\": 1\r\n    },    \r\n    \"_normal_data_label_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 14,\r\n      \"fontWeight\": \"normal\",\r\n      \"fontStyle\": \"normal\",\r\n      \"color\": \"white\"\r\n    },\r\n    \"_inset_data_label_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 14,\r\n      \"fontWeight\": \"normal\",\r\n      \"fontStyle\": \"normal\",\r\n      \"color\": \"#4A4A4A\"\r\n    }\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__1__",
+        "name": "Category Name",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__2__",
+        "name": "Category Value",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Inset Chart - Similar Data",
+    "author": "Greg Philps",
+    "date": "2026-05-15",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.153.1206.0",
+    "description": "An inset chart to accentuate differences between similar data that can be hard to discern in a full range bar chart",
+    "notes": "syntax not found for dynamic width or inset start or gradient inset start or end ... adjust to suit dataset",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Inset Chart - Similar Data",
+    "subtitle": [
+      "Similar Data - 100 Meter Time by Athlete (selected athletes only)",
+      "Data Source: Wikipedia, 2025-05-29",
+      "URL: https://en.wikipedia.org/wiki/100_metres"
+    ],
+    "offset": 20,
+    "font": "Segoe UI",
+    "fontSize": 24,
+    "fontWeight": "bold",
+    "fontStyle": "italic",
+    "color": "#4A4A4A",
+    "subtitleFont": "Segoe UI",
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": "normal",
+    "subtitleFontStyle": "italic",
+    "subtitleColor": "#969696"
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign an internal field name to the dataset field
+    {
+      "calculate": "datum['__1__']",
+      "as": "_category"
+    },
+    {
+      "calculate": "datum['__2__']",
+      "as": "_category_value"
+    },
+    // determine the rank for use in the display order
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "_performance_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "_category_value",
+          "order": "ascending"
+        }
+      ]
+    },
+    // set a composite label
+    {
+      "calculate": "pad( datum['_performance_rank'], 2, '0', 'left' ) + '-' + datum['_category']",
+      "as": "_performance_rank_category_name_label"
+    },
+    // get the min and max data values
+    {
+      "joinaggregate": [
+        {
+          "op": "min",
+          "field": "_category_value",
+          "as": "_min_category_value"
+        },
+        {
+          "op": "max",
+          "field": "_category_value",
+          "as": "_max_category_value"
+        }
+      ]
+    },
+    // add 0.05 to enforce roundUp
+    // adjust increment as nesessary to suit dataset
+    {
+      "calculate": "toNumber( format( datum['_max_category_value'] + 0.05, '.2r' ) )",
+      "as": "_inset_chart_max_value"
+    },
+    // subtract 0.05 to enforce roundDown
+    // adjust decrement as nesessary to suit dataset
+    {
+      "calculate": "toNumber( format( datum['_min_category_value'] - 0.05, '.2r' ) )",
+      "as": "_inset_chart_min_value"
+    }
+  ],
+  "params": [
+    {
+      "name": "_bar_colour",
+      "expr": "pbiColor(2)"
+    },
+    // use an expression for the gradient colour to permit use of a dynamic colour
+    {
+      "name": "_bar_gradient_colour",
+      "expr": "{x1: 0, y0: 0, x2: 1, y2: 0, gradient: 'linear', stops: [{ offset: 0, color: 'white' }, { offset: 1, color: _bar_colour }]}"
+    },
+    {
+      "name": "_inset_chart_lower_value",
+      "expr": "data('data_0')[0]['_inset_chart_min_value']"
+    },
+    {
+      "name": "_inset_chart_upper_value",
+      "expr": "data('data_0')[0]['_inset_chart_max_value']"
+    }
+  ],
+  "spacing": 10,
+  "hconcat": [
+    {
+      "name": "NORMAL_CHART",
+      // text and position only; formatting done in "config\title"
+      "title": {
+        "text": "Normal Chart",
+        "subtitle": "Full Range",
+        "offset": 4
+      },
+      // adjust to suit desired visual size
+      // Future Development: investigate how to use an expression of width here
+      "width": 450,
+      "height": 500,
+      "encoding": {
+        "y": {
+          "field": "_performance_rank_category_name_label",
+          "type": "nominal",
+          "sort": "x", // sort ascending by X value
+          "axis": {
+            "labelExpr": "slice( datum.value, 3, 100 )",
+            "labelPadding": 4
+          }
+        },
+        "x": {
+          "field": "_category_value",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "tickCount": 10,
+            "labelFlush": false
+          }
+        }
+      },
+      "layer": [
+        {
+          "name": "NORMAL_BAR",
+          "mark": {
+            "type": "bar",
+            "color": {
+              "expr": "_bar_colour"
+            },
+            "style": "_normal_bar_style"
+          }
+        },
+        {
+          "name": "NORMAL_DATA_LABEL",
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "xOffset": -8,
+            "style": "_normal_data_label_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_category_value",
+              "type": "quantitative",
+              "format": "0.3s"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "INSET_CHART",
+      "title": {
+        "text": "Inset Chart",
+        "subtitle": "Truncated Range",
+        "offset": 4
+      },
+      // adjust to suit desired visual size
+      // Future Development: investigate how to use an expression of width here
+      "width": 450,
+      "height": 500,
+      "encoding": {
+        "y": {
+          "field": "_performance_rank_category_name_label",
+          "type": "nominal",
+          "sort": "x", // sort ascending by X value
+          "axis": null // disable Y axis (labels, ticks, domain, grid)
+        },
+        "x": {
+          "field": "_category_value",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "labelFlush": false,
+            "tickCount": 10
+          },
+          "scale": {
+            "domain": [
+              {
+                "expr": "_inset_chart_lower_value"
+              },
+              {
+                "expr": "_inset_chart_upper_value"
+              }
+            ]
+          }
+        }
+      },
+      "layer": [
+        {
+          "name": "INSET_BAR",
+          "mark": {
+            "type": "bar",
+            "color": {
+              "expr": "_bar_colour"
+            },
+            "height": {
+              "band": 0.8
+            },
+            "clip": true,
+            "style": "_inset_bar_style"
+          },
+          "encoding": {
+            // adjust as necessary to suit dataset
+            "x": {
+              "datum": 9.5
+            },
+            "x2": {
+              "field": "_category_value"
+            }
+          }
+        },
+        {
+          "name": "INSET_GRADIENT_BAR",
+          "transform": [
+            // NOTE: filter included for consistency with outlier inset chart only (all records returned)
+            {
+              "filter": "datum['_performance_rank'] <= 100"
+            }
+          ],
+          "mark": {
+            "type": "bar",
+            "color": {
+              "expr": "_bar_gradient_colour"
+            },
+            "height": {
+              "band": 0.8
+            },
+            // restrict the domain to the specified range
+            "clip": true,
+            "style": "_inset_gradient_bar_style"
+          },
+          "encoding": {
+            // adjust to suit dataset
+            "x": {
+              "datum": 9.5
+            },
+            // adjust to suit dataset
+            "x2": {
+              "datum": 9.55
+            }
+          }
+        },
+        {
+          "name": "INSET_DATA_LABEL",
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "xOffset": 4,
+            "style": "_inset_data_label_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_category_value",
+              "type": "quantitative",
+              "formatType": "pbiFormat",
+              // adjust Power BI format string to suit dataset 
+              "format": "#.##"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

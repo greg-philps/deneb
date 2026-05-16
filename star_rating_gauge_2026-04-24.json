@@ -1,0 +1,198 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "ff33c15e-c3a9-46b3-ad96-d042b0613adc",
+      "generated": "2026-04-24T17:10:56.739Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+      "name": "Star Rating Gauge",
+      "description": "An SVG-based 5-star rating gauge for Power BI (hard-coded to use a 1-to-5 scale with 1/4 increments, so 0, 0.25, 0.5, 0.75, etc.).",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\n  \"autosize\": {\n    \"type\": \"fit\",\n    \"resize\": true,\n    \"contains\": \"padding\"\n  },\n  \"view\": {\n    \"stroke\": null\n  },\n  // visual title\n  \"title\": {\n    \"font\": \"Segoe UI\",\n    \"fontSize\": 24,\n    \"fontWeight\": \"bold\",\n    \"fontStyle\": \"italic\",\n    \"color\": \"#4A4A4A\"\n  }\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Rating",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Star Rating Guage",
+    "author": "Greg Philps",
+    "date": "2026-04-24",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.153.910.0",
+    "description": "An SVG-based 5-star rating gauge for Power BI",
+    "notes": "hard-coded to use a 1-to-5 scale with 1/4 increments, so 0, 0.25, 0.5, 0.75, etc.",
+    "template notes": "usermeta object is used by the Deneb tempalte generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  // text and position only; formatting done in "config\title"
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Star Rating Gauge"
+  },
+  // set the visual size to fill the Power BI container
+  "width": "container",
+  "height": "container",
+  // use multiple datasets
+  "data": {
+    // hard-coded sequence dataset (for rating scale)
+    "sequence": {
+      "start": 1,
+      "stop": 6,
+      "step": 1,
+      "as": "_x"
+    },
+    // Power BI dataset
+    "name": "dataset"
+  },
+  "transform": [
+    {
+      "lookup": "_threshold",
+      "from": {
+        "data": {
+          "name": "dataset"
+        },
+        "key": "_x",
+        "fields": [
+          "__0__"
+        ]
+      }
+    },
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_rating"
+    },
+    // determine integer and remainder portions
+    {
+      "calculate": "floor( datum['_rating'] )",
+      "as": "_rating_integer"
+    },
+    {
+      "calculate": "datum['_rating'] - datum['_rating_integer']",
+      "as": "_rating_remainder"
+    }
+  ],
+  "params": [
+    {
+      // adjust the "empty" colour as desired
+      // if a named colour, use "value": "lightgrey"
+      // if a HEX code colour, use "value": "#E3E3E3"      
+      "name": "_empty_colour",
+      "value": "#E3E3E3"
+    },
+    {
+      // adjust the "fill" colour as desired
+      // if a named colour, use "value": "gold"
+      // if a HEX code colour, use "value": "#969696"
+      // if a Power BI Theme Colour, use "expr": "pbiColor(0)" and select the desired theme colour (zero-based)
+      "name": "_filled_colour",
+      "expr": "pbiColor(0)"
+    },
+    {
+      "name": "_empty",
+      "expr": "{gradient: 'linear', stops: [{ offset: 0.0, color: _empty_colour }, { offset: 1.0, color: _empty_colour }]}"
+    },
+    {
+      "name": "_1_quarter",
+      "expr": "{gradient: 'linear', stops: [{ offset: 0.0, color: _filled_colour }, { offset: 0.25, color: _filled_colour }, { offset: 0.25, color: _empty_colour }, { offset: 1.0, color: _empty_colour }]}"
+    },
+    {
+      "name": "_half",
+      "expr": "{gradient: 'linear', stops: [{ offset: 0.0, color: _filled_colour }, { offset: 0.5, color: _filled_colour }, { offset: 0.5, color: _empty_colour }, { offset: 1.0, color: _empty_colour }]}"
+    },
+    {
+      "name": "_3_quarters",
+      "expr": "{gradient: 'linear', stops: [{ offset: 0.0, color: _filled_colour }, { offset: 0.75, color: _filled_colour }, { offset: 0.75, color: _empty_colour }, { offset: 1.0, color: _empty_colour }]}"
+    },
+    {
+      "name": "_full",
+      "expr": "{gradient: 'linear', stops: [{ offset: 0.0, color: _filled_colour }, { offset: 1.0, color: _filled_colour }]}"
+    },
+    {
+      "name": "_star_svg",
+      "value": "M0,.5L.6,.8L.5,.1L1,-.3L.3,-.4L0,-1L-.3,-.4L-1,-.3L-.5,.1L-.6,.8L0,.5Z"
+    }
+  ],
+  "layer": [
+    {
+      "name": "STAR_SVGS",
+      "mark": {
+        "type": "point",
+        "shape": {
+          "expr": "_star_svg"
+        },
+        // adjust "star" size as desired
+        "size": 3000,
+        // adjust "star" border colour as desired
+        "stroke": "#969696"
+      },
+      "encoding": {
+        "x": {
+          "field": "_x",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              1,
+              5
+            ]
+          }
+        },
+        "fill": {
+          "condition": [
+            {
+              "test": "datum['_x'] <= datum['_rating_integer']",
+              "value": {
+                "expr": "_full"
+              }
+            },
+            {
+              "test": "datum['_x'] == ( datum['_rating_integer'] + 1 ) && datum['_rating_remainder'] == 0.75",
+              "value": {
+                "expr": "_3_quarters"
+              }
+            },
+            {
+              "test": "datum['_x'] == ( datum['_rating_integer'] + 1 ) && datum['_rating_remainder'] == 0.5",
+              "value": {
+                "expr": "_half"
+              }
+            },
+            {
+              "test": "datum['_x'] == ( datum['_rating_integer'] + 1 ) && datum['_rating_remainder'] == 0.25",
+              "value": {
+                "expr": "_1_quarter"
+              }
+            }
+          ],
+          "value": {
+            "expr": "_empty"
+          }
+        }
+      }
+    }
+  ]
+}
