@@ -7,7 +7,7 @@
 
 
 ## GENERAL
-The required 3 basic ***block*** types of a Deneb/Vega-Lite specification are data, mark, and encoding:
+The required 3 basic ***block*** types of a Deneb/Vega-Lite specification are ***data***, ***mark***, and ***encoding***:
 ``` json
 {
   "data": { "name": "dataset" },
@@ -24,7 +24,7 @@ There are several ***mark*** types in Vega-Lite, including:
 - ***other***: point, rect, rule, square, tick, geoshape
 - ***composite***: boxplot, errorband, errorbar
 
-https://bit.ly/3Bm9xuG
+https://vega.github.io/vega-lite/docs/mark.html
 
 <br>
 
@@ -34,7 +34,7 @@ There are 4 ***field-mapping*** types:
 - ***temporal***: the value of the data (use if date)
 - ***ordinal***: a ranked order for data sorting 
 
-https://bit.ly/3Bvx7VM
+https://vega.github.io/vega-lite/docs/type.html
 
 <hr>
 
@@ -66,7 +66,7 @@ To ***format*** a data value using Power BI format strings, add to its’ defini
 }
 ```
 
-https://bit.ly/3cUwwD3
+https://deneb.guide/docs/formatting#power-bi-custom-formatter
 
 <hr>
 
@@ -86,7 +86,7 @@ To customize tooltips, add a ***tooltip*** block to the encoding block:
 ]
 ```
 
-https://bit.ly/3bppOnT
+https://deneb.guide/docs/interactivity-tooltips
 
 <hr>
 
@@ -190,7 +190,7 @@ OR
 }
 ```
 
-https://bit.ly/3DxRD9c
+https://vega.github.io/vega-lite/docs/mark.html#color
 
 <hr>
 
@@ -202,6 +202,8 @@ To set a visual title, add a ***title*** block:
   "anchor": "start",
   "align": "left" }
 ```
+
+https://vega.github.io/vega-lite/docs/title.html
 
 <hr>
 
@@ -216,8 +218,8 @@ To create an ***input widget***, add to the ***params*** block:
   }
 ]
 ```
-<br>
-https://bit.ly/3zIP4is
+
+https://vega.github.io/vega-lite/examples/interactive_query_widgets.html
 
 <hr>
 
@@ -234,8 +236,7 @@ To use an existing ***template*** for your Deneb visual:
 - browse to the saved location of the desired ***.json*** file and click on the ***.json*** file
 - click the ***Create*** button
 
-<br>
-https://bit.ly/3Seugqe
+https://deneb.guide/docs/templates
 
 <hr>
 
@@ -244,9 +245,9 @@ To set the font size in the Deneb Visual Editor, use the ***Visual / Advanced Ed
 
 <img width="136" height="452" alt="JSON Editor Font Size" src="https://github.com/user-attachments/assets/a8d43993-4ef4-491b-9cba-cf9eeab0630b" />
 
-<hr>
+https://deneb.guide/docs/visual-editor#editor-pane
 
-# LINK \ EXTEND \ COLOUR \ SPECIFIC
+<hr>
 
 ## LINKED CHARTS
 To link 2 charts together, add a ***selection brush*** to the first visual:
@@ -260,7 +261,7 @@ And use the selection in a ***filter transform*** in the second visual:
 "transform": [ { "filter": { "param":  "brush" } } ]
 ```
 
-https://bit.ly/3JhxaGC
+https://vega.github.io/vega-lite/examples/interactive_overview_detail.html
 
 <hr>
 
@@ -274,12 +275,12 @@ To extend a dataset with derived fields, add a ***transform*** block:
   {"calculate": "2*PI*datum['Ring3 Percent']", "as": "Ring3 Radians" }
 ]
 ```
-<br>
-https://bit.ly/3ziGPrU
+
+https://vega.github.io/vega-lite/docs/calculate.html
 
 (Many additional transformations are available, including aggregate, filter, flatten, fold, etc.)
 
-https://bit.ly/3Bu4Q21
+https://vega.github.io/vega-lite/docs/transform.html
 
 To enhance a visual with named values or expressions, add a ***params*** block:
 ``` json
@@ -292,8 +293,8 @@ To enhance a visual with named values or expressions, add a ***params*** block:
   { "name": "ring1_outer", "expr": "ring0_inner - ring_gap" }
 ]
 ```
-<br>
-https://bit.ly/3Q7cPWI
+
+https://vega.github.io/vega-lite/docs/parameter.html
 
 Add common math ***constants*** to expressions:
 ``` json
@@ -301,11 +302,13 @@ Add common math ***constants*** to expressions:
   { "calculate": "2*PI*datum['Ring1 Percent']", "as": "Ring1 Radians" }
 ]
 ```
-https://bit.ly/3PT59I3
+
+https://vega.github.io/vega/docs/expressions/#constants
 
 <hr>
 
 ## NAMED COLOURS
+
 To use a ***named*** colour:
 ``` json
 "mark": {
@@ -326,26 +329,52 @@ To use a built-in Vega-Lite ***colour scheme***:
 > [!NOTE]
 > *There are several schemes available, including category20b, dark2, set1, set2, etc.*
 
-https://bit.ly/3bpoK3l
+https://vega.github.io/vega/docs/schemes/
+
+<hr>
 
 ## THEME COLOURS
+
 To use a specific ***Power BI theme colour***, use the ***pbiColor*** Deneb function in a Vega-Lite ***expression*** and set the theme index (zero-based, so theme colour - 1):
 
 ``` json
 "color": { "value": { "expr": "pbiColor(0)" } }
 ```
-<br>
-https://bit.ly/3vp9Ilg
+
+https://deneb.guide/docs/schemes
 
 <hr>
 
 ## GRADIENT COLOURS
-To add Power BI ***gradient*** colours, add to the color block:
+
+To add Vega-Lite ***gradient*** colours, add a color sub-block to the mark block:
 ``` json
-"scale": { "scheme": "pbiColorLinear" }
+{
+  "mark": {
+    "type": "area",
+    "line": { "color": "darkgreen" },
+    "color": {
+      "x1": 1,
+      "y1": 1,
+      "x2": 1,
+      "y2": 0,
+      "gradient": "linear",
+      "stops": [
+        {
+          "offset": 0,
+          "color": "white"
+        },
+        {
+          "offset": 1,
+          "color": "darkgreen"
+        }
+      ]
+    }
+  }
+}
 ```
 
-https://bit.ly/3OJXNoE
+https://vega.github.io/vega-lite/docs/gradient.html#example-gradient-area-plot
 
 <hr>
 
@@ -356,7 +385,12 @@ There are 4 integrations with the Power BI theme colours in Deneb:
 - ***pbiColorLinear***: uses an interpolated gradient from the MAX to MIN divergent colour of the current theme, and EXCLUDES the MIDDLE colour
 - ***pbiColorDivergent***: same as ***pbiColorLinear***, but INCLUDES the MIDDLE colour
 
-https://bit.ly/3bdEkPA
+https://deneb.guide/docs/schemes
+
+To add Power BI ***gradient*** colours, add to the color block:
+``` json
+"scale": { "scheme": "pbiColorLinear" }
+```
 
 <img width="350" height="150" alt="Bar Chart 6" src="https://github.com/user-attachments/assets/635d8ca4-e827-42d3-8216-a230fc377399" />
 
@@ -371,14 +405,16 @@ To set the smoothing and tension of a line chart, add to the ***line*** mark blo
 
 - options include basis, monotone, natural, step, etc.
 
-https://bit.ly/3RRZSRL
+https://vega.github.io/vega-lite/docs/line.html#properties
 
 To set the label format for a temporal axis, 
 ``` json
 "axis": { "format": "%y-%b-%d" }
 ```
-<br>
-https://bit.ly/3cVA480
+
+https://github.com/d3/d3-time-format#locale_format
+
+<hr>
 
 ## BAR CHARTS
 To turn a bar chart into a ***column*** chart, exchange the X and Y encoding:
@@ -406,7 +442,7 @@ To ***round*** only the ending bar corners, add to bar mark:
 ```
 To control the corner rounding even further, set the ***cornerRadiusTopLeft***, ***cornerRadiusTopRight***, ***cornerRadiusBottomRight***, and ***cornerRadiusBottomLeft*** keys.
 
-https://bit.ly/3DzuXpi
+https://vega.github.io/vega-lite/docs/bar.html#bar-chart-with-rounded-corners
 
 To turn a bar chart into a ***stacked bar chart***, add a color block to the encoding block:
 ``` json
@@ -416,14 +452,14 @@ To turn a bar chart into a ***stacked bar chart***, add a color block to the enc
 }
 ```
 
-https://bit.ly/3zKU4D3
+https://vega.github.io/vega-lite/docs/bar.html#stack
 
 To turn a stacked bar chart into a ***100% stacked bar chart***, add to the Y encoding block:
 ``` json
 "stack": "normalize"
 ```
 
-https://bit.ly/3oJKx9e
+https://vega.github.io/vega-lite/docs/bar.html#normalized-stacked-bar-chart
 
 <hr>
 
@@ -443,7 +479,7 @@ To turn a pie chart into a ***donut*** chart, add a radius2 or inner radius prop
 "innerRadius" :  75
 ```
 
-https://bit.ly/3cUYRcj
+https://vega.github.io/vega-lite/docs/arc.html#pie-and-donut-charts
 
 To set the start and end of an arc segment (in radians; 0 = “north/up”), use the ***theta*** and ***theta2*** properties.
 
@@ -457,7 +493,7 @@ To set the start and end of an arc segment (in radians; 0 = “north/up”), use
 }
 ```
 
-https://bit.ly/3vvE9X0
+https://vega.github.io/vega-lite/docs/arc.html#properties
 
 <img width="400" height="400" alt="Ring Chart" src="https://github.com/user-attachments/assets/28d3ba88-022e-48f1-a6f6-ff1e66bbea4e" />
 
@@ -550,6 +586,8 @@ There are 4 different types of composite views:
 
 ```
 
+https://vega.github.io/vega-lite/docs/composition.html
+
 <img width="500" height="500" alt="View Composition - Repeat" src="https://github.com/user-attachments/assets/23c93c81-a413-44c8-b74d-1c5d0c8af462" />
 
 <hr>
@@ -585,6 +623,8 @@ To use a condition to set the value of a property:
     "param": "paintbrush", "value": 600 }, "value": 50 }
 ```
 
+https://vega.github.io/vega-lite/docs/condition.html
+
 <hr>
 
 ## IF-THEN-ELSE
@@ -603,6 +643,8 @@ OR the ternary form [ test ? thenValue : elseValue ]
 }
 ```
 
+https://vega.github.io/vega/docs/expressions/
+
 <hr>
 
 ## EXPRESSIONS
@@ -612,6 +654,8 @@ To use a parameter, add an ***expr*** block:
 ...
 "mark": {"type": "bar", "color": {"expr": "my_colour" }},
 ```
+
+https://vega.github.io/vega-lite/docs/parameter.html#expr
 
 <hr>
 
@@ -624,4 +668,5 @@ A few notes:
 - Many key-value pairs can be used in multiple locations (e.g., opacity in mark or encoding, etc.)
 - Many key-value pairs are commonly used with only specific marks (e.g., the “text” encoding is used with a “text” mark, etc.)
 - Aside from the common ***data***, ***mark***, and ***encoding*** blocks, a specification does not require many of the key-value pairs (thus they are optional) (e.g., formatType, format, title, etc.)
- 
+
+*- eof*
