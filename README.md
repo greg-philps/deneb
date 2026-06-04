@@ -31,21 +31,18 @@ https://github.com/user-attachments/assets/9e48d7ab-0874-43f0-ab15-07a76a3f30a5
 
 - Interactive Origin Chart
 
+https://github.com/user-attachments/assets/1e19f340-d67e-4d97-a628-b0570eec7017
 
 - Scatterplot Matrix (SPLOM)
 
+https://github.com/user-attachments/assets/7ef7d43f-dfdb-4516-9b34-4bd1d6d7f803
 
 - Ticker - Vertical
 
-
-
-
-
+https://github.com/user-attachments/assets/73121e7c-5b31-4472-a2f0-8ca342ab5454
 
 - Ticker - Horizontal
 
-
-
-
+https://github.com/user-attachments/assets/07e7158f-6745-4e5d-8d0a-1c842a140766
 
 *eof*
