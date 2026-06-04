@@ -22,4 +22,29 @@ A collection of Deneb templates using the Vega-Lite language
 -	Inset Chart – Outlier Data
 <img width="1379" height="684" alt="Image - Inset Chart - Outlier Data" src="https://github.com/user-attachments/assets/86aff8d2-8825-4f80-97a8-522ccb51ab45" />
 
+
+## 2026-06-04
+
+- Slope Chart
+https://github.com/user-attachments/assets/9e48d7ab-0874-43f0-ab15-07a76a3f30a5
+
+- Interactive Origin Chart
+
+
+- Scatterplot Matrix (SPLOM)
+
+
+- Ticker - Vertical
+
+
+
+
+
+
+- Ticker - Horizontal
+
+
+
+
+
 *eof*
