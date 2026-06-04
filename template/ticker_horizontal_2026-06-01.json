@@ -1,0 +1,315 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "248d46aa-4049-435e-90e9-a2bfb44a474b",
+      "generated": "2026-06-01T15:09:32.279Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+      "name": "Deneb Ticker - Horizontal",
+      "description": "A horizontal ticker scrolling notes every tenth of a second",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"title\": {\r\n    \"font\": \"Segoe UI Semibold\",\r\n    \"fontSize\": 18,\r\n    \"fontWeight\": \"normal\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#5C5347\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 14,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#8C8377\"\r\n  },\r\n  \"style\": {\r\n    \"_ticker_bar_style\": {\r\n      \"color\": \"#F0F0F0\",\r\n      \"cornerRadius\": 50\r\n    },\r\n    \"_note_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 24,\r\n      \"fontWeight\": \"bold\",\r\n      \"fontStyle\": \"normal\",\r\n      // use Power BI theme colour and set opacity\r\n      \"color\": {\"expr\": \"pbiColor(0)\"},\r\n      \"opacity\": 0.8\r\n    }\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__1__",
+        "name": "Note",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Ticker - Horizontal",
+    "author": "Greg Philps",
+    "date": "2026-06-01",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.154.1260.0",
+    "description": "A horizontal ticker scrolling notes every tenth of a  second",
+    "notes": "adjust scroll interval as desired; adjust number of times the series of notes is displayed as desired",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal field to identify dataset
+    {
+      "calculate": "1",
+      "as": "_DEV_ID"
+    },
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_id"
+    },
+    {
+      "calculate": "datum['__1__']",
+      "as": "_note"
+    },
+    {
+      "calculate": "if( datum['_id'] == 1, datum['_note'], null )",
+      "as": "_note_1"
+    },
+    {
+      "calculate": "if( datum['_id'] == 2, datum['_note'], null )",
+      "as": "_note_2"
+    },
+    {
+      "calculate": "if( datum['_id'] == 3, datum['_note'], null )",
+      "as": "_note_3"
+    },
+    {
+      "calculate": "if( datum['_id'] == 4, datum['_note'], null )",
+      "as": "_note_4"
+    },
+    {
+      "calculate": "if( datum['_id'] == 5, datum['_note'], null )",
+      "as": "_note_5"
+    },
+    {
+      "calculate": "if( datum['_id'] == 6, datum['_note'], null )",
+      "as": "_note_6"
+    },
+    {
+      "calculate": "if( datum['_id'] == 7, datum['_note'], null )",
+      "as": "_note_7"
+    },
+    {
+      "calculate": "if( datum['_id'] == 8, datum['_note'], null )",
+      "as": "_note_8"
+    },
+    {
+      "calculate": "if( datum['_id'] == 9, datum['_note'], null )",
+      "as": "_note_9"
+    },
+    {
+      "calculate": "if( datum['_id'] == 10, datum['_note'], null )",
+      "as": "_note_10"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "_note_1",
+          "as": "_n1"
+        },
+        {
+          "op": "max",
+          "field": "_note_2",
+          "as": "_n2"
+        },
+        {
+          "op": "max",
+          "field": "_note_3",
+          "as": "_n3"
+        },
+        {
+          "op": "max",
+          "field": "_note_4",
+          "as": "_n4"
+        },
+        {
+          "op": "max",
+          "field": "_note_5",
+          "as": "_n5"
+        },
+        {
+          "op": "max",
+          "field": "_note_6",
+          "as": "_n6"
+        },
+        {
+          "op": "max",
+          "field": "_note_7",
+          "as": "_n7"
+        },
+        {
+          "op": "max",
+          "field": "_note_8",
+          "as": "_n8"
+        },
+        {
+          "op": "max",
+          "field": "_note_9",
+          "as": "_n9"
+        },
+        {
+          "op": "max",
+          "field": "_note_10",
+          "as": "_n10"
+        }
+      ]
+    },
+    {
+      "filter": "datum['__row__'] == 0"
+    },
+    // compose a single string with all notes
+    {
+      "calculate": "if( isValid( datum['_n1'] ), datum['_n1'] + _sep, '' ) + if( isValid( datum['_n2'] ), datum['_n2'] + _sep, '' ) + if( isValid( datum['_n3'] ), datum['_n3'] + _sep, '' ) + if( isValid( datum['_n4'] ), datum['_n4'] + _sep, '' ) + if( isValid( datum['_n5'] ), datum['_n5'] + _sep, '' ) + if( isValid( datum['_n6'] ), datum['_n6'] + _sep, '' ) + if( isValid( datum['_n7'] ), datum['_n7'] + _sep, '' ) + if( isValid( datum['_n8'] ), datum['_n8'] + _sep, '' ) + if( isValid( datum['_n9'] ), datum['_n9'] + _sep, '' ) + if( isValid( datum['_n10'] ), datum['_n10'] + _sep, '' )",
+      "as": "_all_notes"
+    },
+    // strip final separator
+    {
+      "calculate": "slice( datum['_all_notes'], 0, length( datum['_all_notes'] ) - 3 )",
+      "as": "_all_notes"
+    },
+    // concatenate the string 5x
+    {
+      "calculate": "_start_sep + datum['_all_notes'] + _start_sep + datum['_all_notes'] + _start_sep + datum['_all_notes'] + _start_sep + datum['_all_notes'] + _start_sep + datum['_all_notes']",
+      "as": "_5x_notes"
+    }
+  ],
+  "params": [
+    // create timer and calculate elapsed time
+    {
+      "name": "_current_time",
+      "value": "now()",
+      "on": [
+        {
+          "events": {
+            "type": "timer",
+            "throttle": 10 // milliseconds
+          },
+          "update": "now()"
+        }
+      ]
+    },
+    {
+      "name": "_start_time",
+      "init": "now()"
+    },
+    {
+      "name": "_elapsed_ms",
+      "expr": "_current_time - _start_time"
+    },
+    {
+      "name": "_elapsed_tenths_of_seconds",
+      "expr": "_elapsed_ms / 10"
+    },
+    {
+      "name": "_elapsed_seconds",
+      "expr": "seconds( _elapsed_ms )"
+    },
+    {
+      "name": "_sep",
+      "expr": "' ' + '\u2022' + ' '"
+    },
+    // adjust unicode character as desired
+    // \u2588 = filled square (large)
+    // \u21D4 = double-headed block arrow
+    // \u2591 = dotted square (sparse)
+    // \u2692 = dotted square (dense)
+    {
+      "name": "_start_sep",
+      "expr": "' ' + '\u2591' + ' '"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {
+        "title": null,
+        "labels": false,
+        "ticks": false,
+        "domain": false,
+        "grid": false
+      },
+      "scale": {
+        "domain": [
+          0,
+          10
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "name": "BACKGROUND_BAR",
+      "mark": {
+        "type": "bar",
+        "style": "_ticker_bar_style"
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "x2": {
+          "datum": 100
+        },
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 10
+        }
+      }
+    },
+    {
+      "name": "NOTE",
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "clip": true,
+        // *** FIX - ADJUST TO USE ELAPSED TIME ***
+        // "xOffset": -80,
+        "xOffset": {
+          "expr": "_elapsed_tenths_of_seconds * -1"
+        },
+        "style": "_note_text_style"
+      },
+      "encoding": {
+        "text": {
+          "field": "_5x_notes",
+          "type": "nominal"
+        },
+        // "opacity": {
+        //   "field": "_opacity",
+        //   "type": "quantitative",
+        //   "legend": null
+        // },
+        "x": {
+          "datum": 2
+        },
+        "y": {
+          "datum": 5
+        }
+      }
+    }
+  ]
+}

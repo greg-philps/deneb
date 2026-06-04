@@ -1,0 +1,215 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "5c815dc3-4f08-43a0-933c-25d3bb89e9ff",
+      "generated": "2026-06-01T15:09:31.589Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAAAJCAYAAADUxAVJAAAFM0lEQVR4AeyY+09TZxjHv+fQ1lppoVyKVCrgJdOBCkyGitMt7hLdmOJgF0ExS7aZxblsS/ZPLFmW/cKv27Jk2w9uBpdNnQ4QKyj3W7HQUkrLpUBpS7mVUrrneTcx8RfxRwYnfc4573ve53m/z/t+znMIMh47XC7XxnVbX4OVMvAYPlgGyu/3XwgEAl1arXZ23dbXYKUMEDdB4ua7YDBoYLgEUNR5gRqV0Wg0q67ZgXsdg4hElnCzvg/17U509o7S45X/5ubD+KGqBdaBccwvLApH57APP/3Rho7eESxSbNG5whNrunKrGxyjgfR4/bMr9Hw0bCEcwfTsAn651o6p6flHD55wx34e7zQaaN4nDF2rj2OJm4pIJFLFCyCAkiTpIjfY7C4vahr74fZModnipsUPIbK0hIEhH67W9OCGuRfmVics/WP4jTbZ4Z7E1WoLLPYx1Db1Cwgbu9zkHyAfP77+vg5eAsA3NQe1SoFumwfmlgFc/qsTXX0eNHa5BLA9FM/c5qS57WjtGcbd1gHcarBhdm4BrlE/UpO1FNuGvkGvAIO19g1OgEGrbXLg73s23G4mH7ryi9DY6RIAMoxN3W5U/lyPX292YcI3g+uUw+hEkEOQRh/+rHuAwRG/0MR51pOOquputFD+3/54B7cb7QhHomIO7u+kl4L1so1NTou8WyxD6LCO4PfaHoQWIiL2GjsV+Hy+kzJ/K4mwrIfJq5QxtHk6VN+3YbspCcGZEPqHJmkTrDiwd6tY+ES9BvVtA8jekYJrZqvY8DFvEDNUAWRZEguaYYzHrsxk8DUxXiPCN9Oih0Jh9DrHsT/LRMAOweb0oqHDCa6E/QQLw1ZDG9jjGMfmpFio1UosLi4ReG4oFcR/VIRCYHoeDMvO9EQBjsPto3ERzFN1ZA1uT4AqrYvgHIKFIE7bHEd6DNi4QYnMtARY7B4R4zrpz882Ebx9QpOZQLa5JmE0xME5EqCrDmmb9XDQi8OwcX9P/zg8lC9b+4NR3KGqXn3fDjOtiVazATLJxNo89somk2mOcu8lW/5tS9OLKrAlJU70KRUx2EDVhatTJLqEBJ0GMbIs3uzE+E1gmwjMwkoQcNWJ1SjBh0opY5wqgpcqFLcL8zJQcWo/kvSx4Dddo1ZQ3Bhw2xeYExut121E3rNboCKwYzVqyJLErqJKhsKL4p5PapWSwF3Ejbt9CBNwkgykGrToHZgQlS9jSwJVST92bE0C+yWRTqtjTMRRxMiQZUnAxXlxRdOoVUITzytLUfAYRKOkTwG7a4KnBEgK96sor1bLsJhHu0kF1pyz2yiAtdJnnj/5WIOHJEkW2gaAbirx33Hm9VwczsvExTOHcHDfVpS8ugdFR3fjPIFQVpSLj0oPwJCwSbQvlR/G26/txTvH96HklT34rOIFXCovxMGcdHCc1GQdPqUxiVShcnYZcfzwMzwXio9l4ZOyQpSS72ny4/YX54/QvBn4+L1DOLp/G84W5SGdqhzLOnfyORHng5ICnH3z336JNpcri9Ggo41MxvvF+didaVjWkEsb/HnFEZw4sgvsdzSfYpIv37OWF/O3C2g5r3dP5IgcHmoqeyMPPKb45Wy8RfrKScs58uU5uP/UsWwxD6/RAVoj1nysYAdeen47PiwtgC5WzbJXtz29+o74+PjLMvvFxcV9Q9cvydxkq+KnUsZgz85UAXthbvqq0Px/FUl/Ml0JhUKnOT8BFN8QXV+RmcLhsHG1mCwtGZUKadXoXS3r+jQ66d8FGr1eX5ySkmJnjv4BAAD//zUCgfoAAAAGSURBVAMAARcgV3c8WQsAAAAASUVORK5CYII=",
+      "name": "Deneb Ticker - Vertical",
+      "description": "A vertical ticker switching notes every 2 seconds",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"title\": {\r\n    \"font\": \"Segoe UI Semibold\",\r\n    \"fontSize\": 18,\r\n    \"fontWeight\": \"normal\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#5C5347\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 14,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#8C8377\"\r\n  },\r\n  \"style\": {\r\n    \"_ticker_bar_style\": {\r\n      \"color\": \"#F0F0F0\",\r\n      \"cornerRadius\": 50\r\n    },\r\n    \"_note_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 24,\r\n      \"fontWeight\": \"bold\",\r\n      \"fontStyle\": \"normal\",\r\n      // use Power BI theme colour and set opacity\r\n      \"color\": {\r\n        \"expr\": \"pbiColor(0)\"\r\n      },\r\n      \"opacity\": 0.8\r\n    }\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__1__",
+        "name": "Note",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Ticker - Vertical",
+    "author": "Greg Philps",
+    "date": "2026-06-01",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.154.1260.0",
+    "description": "A vertical ticker switching notes every 2 seconds",
+    "notes": "adjust switch interval as desired",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal field to identify dataset
+    {
+      "calculate": "1",
+      "as": "_DEV_ID"
+    },
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_id"
+    },
+    {
+      "calculate": "datum['__1__']",
+      "as": "_note"
+    },
+    // adjust the item display seconds as desired
+    {
+      "calculate": "2",
+      "as": "_item_seconds"
+    },
+    // determine how many items
+    {
+      "joinaggregate": [
+        {
+          "op": "count",
+          "field": "_id",
+          "as": "_item_count"
+        }
+      ]
+    },
+    // determine the row number to display
+    {
+      "calculate": "datum['_item_count'] * datum['_item_seconds']",
+      "as": "_cycle_seconds"
+    },
+    {
+      "calculate": "floor( ( _elapsed_seconds / datum['_cycle_seconds'] ) - 0.001 ) + 1",
+      "as": "_cycle_number"
+    },
+    {
+      "calculate": "floor( ( ( _elapsed_seconds / datum['_cycle_seconds']  ) * datum['_item_count'] ) - 0.001 ) - (datum['_item_count'] * ( datum['_cycle_number'] - 1 ) )",
+      "as": "_row_number"
+    },
+    // always return only the desired single record
+    {
+      "filter": "datum['__row__'] == datum['_row_number']"
+    }
+  ],
+  "params": [
+    // create timer and calculate elapsed time
+    {
+      "name": "_current_time",
+      "value": "now()",
+      "on": [
+        {
+          "events": {
+            "type": "timer",
+            "throttle": 10 // milliseconds
+          },
+          "update": "now()"
+        }
+      ]
+    },
+    {
+      "name": "_start_time",
+      "init": "now()"
+    },
+    {
+      "name": "_elapsed_ms",
+      "expr": "_current_time - _start_time"
+    },
+    {
+      "name": "_elapsed_seconds",
+      "expr": "seconds( _elapsed_ms )"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {
+        "title": null,
+        "labels": false,
+        "ticks": false,
+        "domain": false,
+        "grid": false
+      },
+      "scale": {
+        "domain": [
+          0,
+          10
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "name": "BACKGROUND_BAR",
+      "mark": {
+        "type": "bar",
+        "style": "_ticker_bar_style"
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "x2": {
+          "datum": 100
+        },
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 10
+        }
+      }
+    },
+    {
+      "name": "NOTE",
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        // option 1: value - adjust as desired to set the static max text length in pixels
+        // option 2: expression - use "width" to set dynamic max length in pixels
+        // use [limit] to set the maximum length of the text mark in pixels. The text value will be automatically truncated if the rendered size exceeds the limit.
+        "limit": {
+          "expr": "width-30"
+        },
+        // use [ellipsis] to set the string for text truncated in response to the limit parameter.
+        "ellipsis": "...",
+        "style": "_note_text_style"
+      },
+      "encoding": {
+        "text": {
+          "field": "_note",
+          "type": "nominal"
+        },
+        "x": {
+          "datum": 2
+        },
+        "y": {
+          "datum": 5
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "3b09b218-8e0a-4c99-a572-1fe5cddf2a32",
+      "generated": "2026-06-03T18:20:34.564Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Deneb Interactive Origin Chart",
+      "description": "A multi-line chart showing performance (percent variance) from a user-selected origin to facilitate visual comparisons between categories",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"autosize\": {\r\n    \"type\": \"fit\",\r\n    \"contains\": \"padding\"\r\n  },\r\n  \"padding\": {\r\n    \"left\": 24,\r\n    \"top\": 8,\r\n    \"right\": 8,\r\n    \"bottom\": 8\r\n  },\r\n  \"title\": {\r\n    \"font\": \"Segoe UI\",\r\n    \"fontSize\": 24,\r\n    \"fontWeight\": \"bold\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#4A4A4A\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 16,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#969696\"\r\n  },\r\n  \"axisX\": {\r\n    \"title\": false,\r\n    \"ticks\": true,\r\n    \"domain\": true,\r\n    \"domainColor\": \"#A3A3A3\",\r\n    \"offset\": 4,\r\n    \"grid\": true,\r\n    \"gridColor\": \"#EEEEEE\",\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 10,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#4A4A4A\"\r\n  },\r\n  \"axisY\": {\r\n    \"ticks\": false,\r\n    \"domain\": false,\r\n    \"domainWidth\": 2,\r\n    \"domainColor\": \"#A3A3A3\",\r\n    \"grid\": true,\r\n    \"gridColor\": \"#F0F0F0\",\r\n    \"titleFont\": \"Segoe UI\",\r\n    \"titleFontSize\": 16,\r\n    \"titleFontWeight\": \"normal\",\r\n    \"titleFontStyle\": \"normal\",\r\n    \"titleColor\": \"#969696\",\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 16,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#4A4A4A\"\r\n  },\r\n  \"legend\": {\r\n    \"symbolType\": \"circle\",\r\n    \"symbolStrokeWidth\": 14,\r\n    \"symbolSize\": 200,\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 18,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#4A4A4A\"\r\n  },\r\n  \"style\": {\r\n    \"_origin_rule_style\": {\r\n      \"strokeWidth\": 5,\r\n      \"color\": \"firebrick\"\r\n    },\r\n    \"_origin_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 14,\r\n      \"fontWeight\": \"normal\",\r\n      \"fontStyle\": \"normal\",\r\n      \"color\": \"#969696\"\r\n    }\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Index",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__1__",
+        "name": "Date",
+        "description": "",
+        "kind": "column",
+        "type": "dateTime"
+      },
+      {
+        "key": "__2__",
+        "name": "Price",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Interactive Origin Chart",
+    "author": "Greg Philps",
+    "date": "2026-06-03",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.154.1260.0",
+    "description": "A multi-line chart showing performance (percent variance) from a user-selected origin to facilitate visual comparisons between categories",
+    "notes": "origin date label on right of vertical rule for 1st half of dates and on left for 2nd half of dates",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Interactive Origin Chart",
+    "subtitle": [
+      "Market Index Percent Performance by Date",
+      "Data Source: Investing.com, 2026-05-28",
+      "URL: https://ca.investing.com/indices/major-indices"
+    ],
+    "offset": 60
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset",
+    "format": {
+      "parse": {
+        "date": "__1__"
+      }
+    }
+  },
+  "width": 800,
+  // "height": 380,
+  "transform": [
+    // assign dev id to help identify dataset in data pane
+    {
+      "calculate": "1",
+      "as": "_DEV_ID"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "mean",
+          "field": "__1__",
+          "as": "_mean_date"
+        }
+      ]
+    },
+    {
+      "calculate": "datetime( datum['_mean_date'] )",
+      "as": "_threshold_date"
+    }
+  ],
+  "layer": [
+    {
+      "name": "ORIGIN_POINT_HIDDEN",
+      "params": [
+        {
+          "name": "_origin",
+          "value": [
+            {
+              "x": {
+                "year": 2025,
+                "month": 1,
+                "date": 1
+              }
+            }
+          ],
+          "select": {
+            "type": "point",
+            "encodings": [
+              "x"
+            ],
+            "on": "mouseover",
+            "nearest": true
+          }
+        }
+      ],
+      "mark": {
+        "type": "point"
+      },
+      "encoding": {
+        "x": {
+          "field": "__1__",
+          "type": "temporal"
+        },
+        "opacity": {
+          "value": 0
+        }
+      }
+    },
+    {
+      "layer": [
+        {
+          "name": "STOCK_LINES",
+          "transform": [
+            {
+              "lookup": "__0__",
+              "from": {
+                "param": "_origin",
+                "key": "__0__"
+              }
+            },
+            {
+              "calculate": "datum._origin && datum._origin['Price'] > 0 ? (datum['__2__'] - datum._origin['Price'])/datum._origin['Price'] : 0",
+              "as": "_indexed_price"
+            }
+          ],
+          "mark": {
+            "type": "line"
+          },
+          "encoding": {
+            "x": {
+              "field": "__1__",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "_indexed_price",
+              "type": "quantitative",
+              "axis": {
+                "title": "Percent Variance",
+                "format": "%"
+              }
+            },
+            "color": {
+              "field": "__0__",
+              "type": "nominal",
+              // hard-coded colours
+              "scale": {
+                "domain": [
+                  "TSX",
+                  "CAC 40",
+                  "FTSE 100",
+                  "DAX",
+                  "Nikkei 225"
+                ],
+                "range": [
+                  "#4A4A4A", // black
+                  "#0000FF", // green
+                  "#00FF00", // red
+                  "#FF0000", // blue
+                  "#969696" // grey
+                ]
+              },
+              // // Deneb's built-in use of the current Power BI theme colours
+              // "scale": {
+              //   "scheme": "pbiColorNominal"
+              // },
+              "legend": {
+                "orient": "none",
+                "direction": "horizontal",
+                "legendX": -44,
+                "legendY": -44,
+                "title": null
+              }
+            }
+          }
+        },
+        {
+          "name": "ORIGIN_VERTICAL_RULE_AND_TEXT",
+          "transform": [
+            {
+              "filter": {
+                "param": "_origin"
+              }
+            }
+          ],
+          "encoding": {
+            "x": {
+              "field": "__1__",
+              "type": "temporal"
+            }
+          },
+          "layer": [
+            {
+              "name": "ORIGIN_RULE",
+              "mark": {
+                "type": "rule",
+                "style": "_origin_rule_style"
+              }
+            },
+            {
+              "name": "ORIGIN_TEXT",
+              "mark": {
+                "type": "text",
+                "align": {
+                  "expr": "datum['__1__'] > datum['_threshold_date'] ? 'right' : 'left'"
+                },
+                "xOffset": {
+                  "expr": "datum['__1__'] > datum['_threshold_date'] ? -8 : 8"
+                },
+                "style": "_origin_text_style"
+              },
+              "encoding": {
+                "text": {
+                  "field": "__1__",
+                  "timeUnit": "yearmonthdate"
+                },
+                "y": {
+                  "value": 8
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
