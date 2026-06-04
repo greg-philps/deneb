@@ -26,7 +26,7 @@ A collection of Deneb templates using the Vega-Lite language
 ## 2026-06-04
 
 - Slope Chart
-- <br>
+
 https://github.com/user-attachments/assets/9e48d7ab-0874-43f0-ab15-07a76a3f30a5
 
 - Interactive Origin Chart
