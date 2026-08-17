@@ -1,0 +1,209 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "c610ffc5-dee7-4131-855c-119b411005a6",
+      "generated": "2026-08-17T13:44:43.680Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+      "name": "Linked Charts - Overview and Detail",
+      "description": "Two linked area charts with the full date range shown on the [Overview] chart where a rectangular brush can be used to select the period shown in the [Detail] chart",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"autosize\": {\r\n    \"type\": \"fit\",\r\n    \"contains\": \"padding\"\r\n  },\r\n  // use the same values for both the visual title and the chart titles\r\n  \"title\": {\r\n    \"font\": \"Segoe UI\",\r\n    \"fontSize\": 24,\r\n    \"fontWeight\": \"bold\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#4A4A4A\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 16,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#969696\"\r\n  },\r\n  // use the same values for both the X and Y axes for both charts\r\n  \"axis\": {\r\n    \"ticks\": true,\r\n    \"domain\": true,\r\n    \"domainColor\": \"#A3A3A3\",\r\n    \"grid\": true,\r\n    \"gridColor\": \"#EEEEEE\",\r\n    \"titleFont\": \"Segoe UI\",\r\n    \"titleFontSize\": 14,\r\n    \"titleFontWeight\": \"normal\",\r\n    \"titleFontStyle\": \"normal\",\r\n    \"titleColor\": \"#252525\",\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 10,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"normal\",\r\n    \"labelColor\": \"#969696\",\r\n    \"labelFlush\": false\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Date",
+        "description": "",
+        "kind": "column",
+        "type": "dateTime"
+      },
+      {
+        "key": "__1__",
+        "name": "Total Sales",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Linked Charts - Overview & Detail",
+    "author": "Greg Philps",
+    "date": "2026-08-17",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.156.951",
+    "description": "Two linked area charts with the full date range shown on the [Overview] chart where a rectangular brush can be used to select the period shown in the [Detail] chart",
+    "notes": "",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Linked Charts - Overview & Detail",
+    "subtitle": [
+      "Use rectangluar brush to select period of interest",
+      "Full period above; selected period below"
+    ],
+    "offset": 20
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_date"
+    },
+    {
+      "calculate": "datum['__1__']",
+      "as": "_daily_value"
+    }
+  ],
+  "params": [
+    {
+      "name": "_brush",
+      "select": {
+        "type": "interval",
+        "encodings": [
+          "x"
+        ]
+      }
+    }
+  ],
+  "vconcat": [
+    {
+      "name": "OVERVIEW",
+      "width": 1100,
+      "height": 230,
+      "title": {
+        "text": "Overview",
+        "anchor": "start"
+      },
+      "mark": {
+        "type": "area",
+        // Power BI theme colour, 50% lighter
+        // https://deneb.guide/docs/schemes#expression-based-access-using-pbicolor
+        "color": {
+          "expr": "pbiColor(0, 0.5)"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "_date",
+          "type": "temporal",
+          "axis": {
+            "tickCount": 12, // adjust as desired
+            "labelAlign": "left",
+            "labelExpr": "[timeFormat(datum.value, '%b'), timeFormat(datum.value, '%m') == '01' ? timeFormat(datum.value, '%Y') : '']",
+            "labelOffset": 4,
+            "labelPadding": -24,
+            "tickSize": 30,
+            "gridColor": "#A3A3A3",
+            "tickColor": "#A3A3A3",
+            "gridDash": {
+              "condition": {
+                "test": {
+                  "field": "_date",
+                  "timeUnit": "month",
+                  "equal": 1
+                },
+                "value": []
+              },
+              "value": [
+                2,
+                2
+              ]
+            },
+            "tickDash": {
+              "condition": {
+                "test": {
+                  "field": "_date",
+                  "timeUnit": "month",
+                  "equal": 1
+                },
+                "value": []
+              },
+              "value": [
+                2,
+                2
+              ]
+            },
+            "title": "__0__"
+          }
+        },
+        "y": {
+          "field": "_daily_value",
+          "type": "quantitative",
+          "axis": {
+            "tickCount": 10,
+            "title": "Value"
+          }
+        }
+      }
+    },
+    {
+      "name": "DETAIL",
+      "width": 1100,
+      "height": 340,
+      "title": {
+        "text": "Detail",
+        "anchor": "start"
+      },
+      "transform": [
+        // restrict the dataset to the period selected by the rectangular brush
+        {
+          "filter": {
+            "param": "_brush"
+          }
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "tension": 0.7,
+        // Power BI theme colour, 10% lighter
+        // https://deneb.guide/docs/schemes#expression-based-access-using-pbicolor
+        "color": {
+          "expr": "pbiColor(0, 0.1)"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "_date",
+          "type": "temporal",
+          "axis": {
+            "tickCount": 10, // adjust as desired
+            "title": "__0__"
+          }
+        },
+        "y": {
+          "field": "_daily_value",
+          "type": "quantitative",
+          "axis": {
+            "tickCount": 10,
+            "title": "Value"
+          }
+        }
+      }
+    }
+  ]
+}

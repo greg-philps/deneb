@@ -1,0 +1,505 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "f1f3bce3-050d-4d04-9851-5fa7f0425468",
+      "generated": "2026-08-17T14:18:05.053Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+      "name": "Linked Charts - Area Brush - Scatter Chart and Top 20 Table",
+      "description": "Two linked charts (scatter chart showing the selected players where an area brush can be used to select a subset of players and their statistics in a top 20 table); the first ranked in each statistic is highlighted",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\n  \"view\": {\n    \"stroke\": null\n  },\n  \"title\": {\n    \"align\": \"left\",\n    \"offset\": 10,\n    \"font\": \"Segoe UI\",\n    \"fontSize\": 18,\n    \"fontWeight\": \"bold\",\n    \"fontStyle\": \"italic\",\n    \"color\": \"#4A4A4A\",\n    \"subtitleFont\": \"Segoe UI\",\n    \"subtitleFontSize\": 12,\n    \"subtitleFontWeight\": \"normal\",\n    \"subtitleFontStyle\": \"italic\",\n    \"subtitleColor\": \"#4A4A4A\"\n  },\n  \"legend\": {\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontSize\": 12,\n    \"titleFontWeight\": \"bold\",\n    \"titleFontStyle\": \"italic\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 10,\n    \"labelFontWeight\": \"normal\",\n    \"labelFontStyle\": \"italic\"\n  },\n  \"axisX\": {\n    \"ticks\": false,\n    \"domain\": false,\n    // add space (pixels) between axis and data\n    \"offset\": 4,\n    \"grid\": false,\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontSize\": 14,\n    \"titleFontWeight\": \"bold\",\n    \"titleFontStyle\": \"normal\",\n    \"titleColor\": \"#4A4A4A\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 10,\n    \"labelFontWeight\": \"normal\",\n    \"labelFontStyle\": \"normal\",\n    \"labelColor\": \"#4A4A4A\"\n  },\n  \"axisY\": {\n    \"labelPadding\": 4,\n    \"ticks\": false,\n    \"domain\": false,\n    // add space (pixels) between axis and data\n    \"offset\": 4,\n    \"grid\": false,\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontSize\": 14,\n    \"titleFontWeight\": \"bold\",\n    \"titleFontStyle\": \"normal\",\n    \"titleColor\": \"#4A4A4A\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 10,\n    \"labelFontWeight\": \"normal\",\n    \"labelFontStyle\": \"normal\",\n    \"labelColor\": \"#4A4A4A\"\n  }\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Name",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__1__",
+        "name": "Team",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__2__",
+        "name": "Position",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__3__",
+        "name": "Average Minutes",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__4__",
+        "name": "Goals",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__5__",
+        "name": "Yellow Cards",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__6__",
+        "name": "Assists",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__7__",
+        "name": "ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__8__",
+        "name": "Shots",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Linked Charts - Area Brush",
+    "author": "Greg Philps",
+    "date": "2026-08-17",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.156.951",
+    "description": "Two linked charts (scatter chart showing the selected players where an area brush can be used to select a subset of players and their statistics in a top 20 table)",
+    "notes": "The first ranked in each statistic is highlighted",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "offset": 20,
+    "anchor": "start",
+    "align": "left",
+    "text": "Deneb Linked Charts - Area Brush",
+    "font": "Segoe UI",
+    "fontSize": 24,
+    "fontWeight": "bold",
+    "fontStyle": "italic",
+    "color": "#4A4A4A",
+    "subtitle": [
+      "Scatter Chart and Top 20 Table",
+      "Football Statistics - 2025-2026"
+    ],
+    "subtitleFont": "Segoe UI",
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": "normal",
+    "subtitleFontStyle": "italic",
+    "subtitleColor": "#4A4A4A"
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // restrict dataset to only those players with >=5 goals and >= 45 average minutes
+    {
+      "filter": "datum['__4__'] >= 5 && datum['__3__'] >= 45"
+    },
+    // prefix the position with an order
+    {
+      "calculate": "[ 'Forward', 'Midfielder', 'Defender', 'Goalkeeper' ]",
+      "as": "_position_array"
+    },
+    {
+      "calculate": "indexof( datum['_position_array'], datum['__2__'] ) + '-' + datum['__2__']",
+      "as": "_combined_position"
+    }
+  ],
+  "params": [
+    {
+      "name": "_highlight_colour",
+      "value": "#0CA181"
+    }
+  ],
+  "vconcat": [
+    {
+      "name": "DIVIDER",
+      "width": 1230,
+      "height": 2,
+      "data": {
+        "values": [
+          {
+            "y_width": 100
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#969696",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "y_width",
+          "type": "quantitative",
+          "axis": null
+        }
+      }
+    },
+    {
+      "hconcat": [
+        {
+          "name": "SCATTER",
+          "width": 500,
+          "height": 500,
+          "title": {
+            "offset": 40,
+            "anchor": "middle",
+            "text": "Goals vs. Average Minutes",
+            "subtitle": "(>= 5 goals and >= 45 minutes)"
+          },
+          "encoding": {
+            "x": {
+              "field": "__4__",
+              "type": "quantitative",
+              "axis": {
+                "grid": true,
+                "labelFontSize": 12
+              },
+              "scale": {
+                "domain": [
+                  0,
+                  40
+                ]
+              }
+            },
+            "y": {
+              "field": "__3__",
+              "type": "quantitative",
+              "axis": {
+                "grid": true,
+                "labelFontSize": 12
+              },
+              "scale": {
+                "domain": [
+                  40,
+                  100
+                ]
+              }
+            }
+          },
+          "layer": [
+            {
+              "name": "SYMBOL",
+              "params": [
+                {
+                  "name": "_brush",
+                  "select": "interval"
+                }
+              ],
+              "mark": {
+                "type": "point",
+                "size": 200,
+                "filled": true,
+                "tooltip": true
+              },
+              "encoding": {
+                "color": {
+                  "field": "_combined_position",
+                  "type": "nominal",
+                  "legend": {
+                    "orient": "bottom",
+                    "symbolSize": 300,
+                    "title": "__2__",
+                    "labelExpr": "slice( datum.value, 2, 100 )"
+                  }
+                },
+                "shape": {
+                  "field": "_combined_position",
+                  "type": "nominal"
+                },
+                "tooltip": [
+                  {
+                    "field": "__0__",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "__1__",
+                    "type": "nominal"
+                  },
+                  {
+                    "field": "__3__",
+                    "type": "quantitative",
+                    "title": "Avg. Min."
+                  },
+                  {
+                    "field": "__4__",
+                    "type": "quantitative"
+                  },
+                  {
+                    "field": "__8__",
+                    "type": "quantitative"
+                  },
+                  {
+                    "field": "__6__",
+                    "type": "quantitative"
+                  },
+                  {
+                    "field": "__5__",
+                    "type": "quantitative",
+                    "title": "Yellows"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "NAME",
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "xOffset": 10,
+                "color": "black"
+              },
+              "encoding": {
+                "text": {
+                  "field": "__0__",
+                  "type": "nominal"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "TOP_20_TABLE",
+          "width": 600,
+          "height": {
+            "step": 20
+          },
+          "title": {
+            "anchor": "middle",
+            "text": "Player Statistics",
+            "subtitle": "(leaders highlighted)"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "_brush"
+              }
+            },
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_id_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "__7__",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "filter": "datum['_id_rank'] <= 20"
+            },
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_goals_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "__4__",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_shots_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "__8__",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_yellows_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "__5__",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_assists_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "__6__",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_minutes_rank"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "__3__",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "fold": [
+                "__4__",
+                "__8__",
+                "__5__",
+                "__6__",
+                "__3__"
+              ]
+            }
+          ],
+          "encoding": {
+            "x": {
+              "field": "key",
+              "type": "nominal",
+              "axis": {
+                "labelAngle": 0,
+                "orient": "top",
+                "labelFontSize": 12
+              },
+              "title": "Statistic",
+              "scale": {
+                "padding": 0.05
+              },
+              "sort": null
+            },
+            "y": {
+              "field": "__0__",
+              "type": "ordinal",
+              "axis": {
+                "labelFontSize": 12
+              },
+              "title": "Player",
+              "scale": {
+                "padding": 0.05
+              },
+              "sort": {
+                "op": "sum",
+                "field": "__0__",
+                "order": "ascending"
+              }
+            }
+          },
+          "layer": [
+            {
+              "mark": {
+                "type": "rect",
+                "style": "_rect_style"
+              },
+              "encoding": {
+                "color": {
+                  "condition": [
+                    {
+                      "test": "datum['key'] == 'Goals' && datum['_goals_rank'] == 1",
+                      "value": {
+                        "expr": "_highlight_colour"
+                      }
+                    },
+                    {
+                      "test": "datum['key'] == 'Shots' && datum['_shots_rank'] == 1",
+                      "value": {
+                        "expr": "_highlight_colour"
+                      }
+                    },
+                    {
+                      "test": "datum['key'] == 'Yellow Cards' && datum['_yellows_rank'] == 1",
+                      "value": {
+                        "expr": "_highlight_colour"
+                      }
+                    },
+                    {
+                      "test": "datum['key'] == 'Assists' && datum['_assists_rank'] == 1",
+                      "value": {
+                        "expr": "_highlight_colour"
+                      }
+                    },
+                    {
+                      "test": "datum['key'] == 'Average Minutes' && datum['_minutes_rank'] == 1",
+                      "value": {
+                        "expr": "_highlight_colour"
+                      }
+                    }
+                  ],
+                  "value": "#E3E3E3"
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "color": "black",
+                "fontWeight": "bold"
+              },
+              "encoding": {
+                "text": {
+                  "field": "value"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

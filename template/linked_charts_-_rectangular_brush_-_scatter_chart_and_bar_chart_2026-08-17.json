@@ -1,0 +1,338 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "9022c83f-b900-49e6-b8e8-81016f8d1d55",
+      "generated": "2026-08-17T13:57:22.163Z",
+      "previewImageBase64PNG": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+      "name": "Linked Charts - Rectangular Brush - Scatter Chart and Bar Chart",
+      "description": "Two linked charts (scatter chart with the full date range above where a rectangular brush can be used to select a product breakdown in the bar chart below); three-section legend for shape, colour, size (location, category, value)",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\n  \"view\": {\n    \"stroke\": \"transparent\"\n  },\n  //\n  \"title\": {\n    \"align\": \"left\",\n    \"offset\": 10,\n    \"font\": \"Segoe UI\",\n    \"fontSize\": 18,\n    \"fontWeight\": \"bold\",\n    \"fontStyle\": \"italic\",\n    \"color\": \"#4A4A4A\"\n  },\n  \"legend\": {\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontSize\": 12,\n    \"titleColor\": \"#707070\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 10,\n    \"labelColor\": \"#707070\"\n  },\n  \"axisX\": {\n    \"ticks\": false,\n    \"domain\": true,\n    \"domainColor\": \"#A3A3A3\",\n    // add space (pixels) between axis and data\n    \"offset\": 4,\n    \"grid\": false,\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontSize\": 14,\n    \"titleFontWeight\": \"bold\",\n    \"titleFontStyle\": \"normal\",\n    \"titleColor\": \"#4A4A4A\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 10,\n    \"labelFontWeight\": \"normal\",\n    \"labelFontStyle\": \"normal\",\n    \"labelColor\": \"#4A4A4A\"\n  },\n  \"axisY\": {\n    \"labelPadding\": 4,\n    \"ticks\": false,\n    \"domain\": true,\n    \"domainColor\": \"#A3A3A3\",\n    // add space (pixels) between axis and data\n    \"offset\": 4,\n    \"grid\": false,\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontSize\": 14,\n    \"titleFontWeight\": \"bold\",\n    \"titleFontStyle\": \"normal\",\n    \"titleColor\": \"#4A4A4A\",\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 10,\n    \"labelFontWeight\": \"normal\",\n    \"labelFontStyle\": \"normal\",\n    \"labelColor\": \"#4A4A4A\"\n  }\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Date",
+        "description": "",
+        "kind": "column",
+        "type": "dateTime"
+      },
+      {
+        "key": "__1__",
+        "name": "Country",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__2__",
+        "name": "Product",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__3__",
+        "name": "Total Sales",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Linked Charts - Rectangular Brush",
+    "author": "Greg Philps",
+    "date": "2026-08-17",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.156.951",
+    "description": "Two linked charts (scatter chart with the full date range above where a rectangular brush can be used to select a product breakdown in the bar chart below)",
+    "notes": "Three-section legend for shape, colour, size (location, category, value)",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "offset": 16,
+    "text": "Deneb Linked Charts - Rectangular Brush",
+    "subtitle": "Scatter Chart and Bar Chart",
+    // set the title and subtitle font attribues here as the [config/title] applies to the linked chart titles
+    "font": "Segoe UI",
+    "fontSize": 24,
+    "fontWeight": "bold",
+    "fontStyle": "italic",
+    "color": "#4A4A4A",
+    "subtitleFont": "Segoe UI",
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": "normal",
+    "subtitleFontStyle": "italic",
+    "subtitleColor": "#969696"
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_date"
+    },
+    {
+      "calculate": "datum['__1__']",
+      "as": "_location"
+    },
+    {
+      "calculate": "datum['__2__']",
+      "as": "_category"
+    },
+    {
+      "calculate": "datum['__3__']",
+      "as": "_value"
+    },
+    // date calculations
+    {
+      "calculate": "year( datum['_date'] )",
+      "as": "_year"
+    },
+    // get location and category distinct counts'
+    {
+      "joinaggregate": [
+        {
+          "op": "distinct",
+          "field": "_location",
+          "as": "_distinct_locations"
+        }
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "distinct",
+          "field": "_category",
+          "as": "_distinct_categories"
+        }
+      ]
+    }
+  ],
+  "params": [
+    {
+      "name": "_number_of_locations",
+      "expr": "data('data_0')[0]['_distinct_locations']"
+    },
+    {
+      "name": "_number_of_categories",
+      "expr": "data('data_0')[0]['_distinct_categories']"
+    }
+  ],
+  "vconcat": [
+    {
+      "name": "SCATTER_CHART",
+      "width": 960,
+      "height": 320,
+      "title": {
+        "text": "Sales by Date",
+        "anchor": "start",
+        "dx": -20 // adjust to align chart titles as desired
+      },
+      "selection": {
+        "brush": {
+          "type": "interval",
+          "encodings": [
+            "x"
+          ]
+        }
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "_date",
+          "timeUnit": "monthdate",
+          "axis": {
+            // adjust month format as desired
+            // https://d3js.org/d3-time-format#locale_format
+            "format": "%b"
+          },
+          "title": "__0__"
+        },
+        "y": {
+          "field": "_value",
+          "type": "quantitative",
+          "title": "Sales"
+        },
+        "shape": {
+          "field": "_location",
+          "type": "nominal",
+          "legend": {
+            "orient": "none",
+            "direction": "vertical",
+            "legendX": {
+              "expr": "width + 20"
+            },
+            "legendY": 0,
+            "title": "__1__"
+          }
+        },
+        "color": {
+          "condition": {
+            "param": "brush",
+            "field": "_category",
+            "type": "nominal",
+            "scale": {
+              "scheme": "pbiColorNominal"
+            },
+            "legend": {
+              "orient": "none",
+              "direction": "vertical",
+              "legendX": {
+                "expr": "width + 20"
+              },
+              // adjust location multiplier as desired
+              "legendY": {
+                "expr": "_number_of_locations * 20"
+              },
+              "title": "Category"
+            }
+          },
+          "value": "lightgray"
+        },
+        "size": {
+          "field": "_value",
+          "type": "quantitative",
+          "legend": {
+            "orient": "none",
+            "direction": "vertical",
+            "legendX": {
+              "expr": "width + 20"
+            },
+            // adjust location and category multipliers as desired
+            "legendY": {
+              "expr": "( _number_of_locations * 20 ) + ( _number_of_categories * 16 )"
+            },
+            "title": "Sales"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "_location",
+            "type": "nominal",
+            "title": "__1__"
+          },
+          {
+            "field": "_category",
+            "type": "nominal",
+            "title": "Category"
+          },
+          {
+            "field": "_value",
+            "type": "quantitative",
+            "title": "Sales",
+            "formatType": "pbiFormat",
+            // adjust Power BI format string as desired
+            "format": "#,0"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BAR_CHART",
+      "width": 960,
+      "height": 100,
+      "title": {
+        "text": "Sales by Product",
+        "anchor": "start"
+      },
+      "transform": [
+        {
+          "filter": {
+            "param": "brush"
+          }
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "_value",
+              "as": "_sum_value"
+            }
+          ],
+          "groupby": [
+            "_year",
+            "_category"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 4,
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "_sum_value",
+          "type": "quantitative",
+          "axis": {
+            // adjust number format as desired
+            // https://d3js.org/d3-format#locale_format
+            "format": ".2s",
+            "ticks": true,
+            "tickCount": 10
+          },
+          "title": "Sales"
+        },
+        "y": {
+          "field": "_category",
+          "type": "nominal",
+          "sort": {
+            "field": "_sum_value",
+            "type": "quantitative",
+            "order": "descending"
+          },
+          "title": "Category"
+        },
+        "color": {
+          "field": "_category",
+          "scale": {
+            "scheme": "pbiColorNominal"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "_category",
+            "type": "nominal",
+            "title": "__2__"
+          },
+          {
+            "field": "_sum_value",
+            "type": "quantitative",
+            "title": "Sales",
+            "formatType": "pbiFormat",
+            // adjust Power BI format string as desired
+            "format": "#,0"
+          }
+        ]
+      }
+    }
+  ]
+}
