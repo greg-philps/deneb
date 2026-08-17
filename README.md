@@ -49,15 +49,14 @@ https://github.com/user-attachments/assets/07e7158f-6745-4e5d-8d0a-1c842a140766
 
 - Linked Charts - Overview and Detail
 
-<<< INSERT IMAGE >>>
+https://github.com/user-attachments/assets/676187fa-173e-4809-9e80-23e293ee8fdc
 
 - Linked Charts - Rectangular Brush - Scatter Chart and Bar Chart
 
-<<< INSERT IMAGE >>>
+https://github.com/user-attachments/assets/deb1f00d-2440-412f-94a2-b0017778ef75
 
 - Linked Charts - Area Brush - Scatter Chart and Top 20 Table
 
-<<< INSERT IMAGE >>>
-
+https://github.com/user-attachments/assets/5864bc57-66f1-4a7f-89a5-50ea68042299
 
 *eof*
