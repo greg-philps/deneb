@@ -5,23 +5,33 @@ A collection of Deneb templates using the Vega-Lite language
 
 <br>
 
-## 2026-05-16
+## 2026-08-26
 
--	Segmented Linear Gauge
-<img width="592" height="266" alt="Image - Segmented Linear Gauge" src="https://github.com/user-attachments/assets/55b643cb-0b16-441a-b171-c6df8f3972f2" />
+- Distributions
 
--	Star Rating Gauge
-<img width="495" height="248" alt="Image - Star Rating Gauge" src="https://github.com/user-attachments/assets/010214f7-2a85-4f62-ad6d-301c19609599" />
+https://github.com/user-attachments/assets/cd58d5e0-d04a-40bb-971a-8a39528ce040
 
--	Thermometer Gauge
-<img width="726" height="589" alt="Image - Thermometer Gauge" src="https://github.com/user-attachments/assets/b600e1f0-213f-4825-af87-dcbfc4c4958b" />
+- Facetted Histograms
 
--	Inset Chart – Similar Data
-<img width="1310" height="687" alt="Image - Inset Chart - Similar Data" src="https://github.com/user-attachments/assets/352b486c-be27-488d-80fd-cdf9fffa5801" />
+<img width="1017" height="786" alt="Facetted Histograms" src="https://github.com/user-attachments/assets/e49fa6bb-46d5-422d-a257-74e5d494cca3" />
 
--	Inset Chart – Outlier Data
-<img width="1379" height="684" alt="Image - Inset Chart - Outlier Data" src="https://github.com/user-attachments/assets/86aff8d2-8825-4f80-97a8-522ccb51ab45" />
+- Category Enclosures
 
+https://github.com/user-attachments/assets/00157ce3-68ec-48cf-886f-2dfa64794339
+
+## 2026-08-17
+
+- Linked Charts - Overview and Detail
+
+https://github.com/user-attachments/assets/676187fa-173e-4809-9e80-23e293ee8fdc
+
+- Linked Charts - Rectangular Brush - Scatter Chart and Bar Chart
+
+https://github.com/user-attachments/assets/deb1f00d-2440-412f-94a2-b0017778ef75
+
+- Linked Charts - Area Brush - Scatter Chart and Top 20 Table
+
+https://github.com/user-attachments/assets/5864bc57-66f1-4a7f-89a5-50ea68042299
 
 ## 2026-06-04
 
@@ -45,18 +55,21 @@ https://github.com/user-attachments/assets/73121e7c-5b31-4472-a2f0-8ca342ab5454
 
 https://github.com/user-attachments/assets/07e7158f-6745-4e5d-8d0a-1c842a140766
 
-## 2026-08-17
+## 2026-05-16
 
-- Linked Charts - Overview and Detail
+-	Segmented Linear Gauge
+<img width="592" height="266" alt="Image - Segmented Linear Gauge" src="https://github.com/user-attachments/assets/55b643cb-0b16-441a-b171-c6df8f3972f2" />
 
-https://github.com/user-attachments/assets/676187fa-173e-4809-9e80-23e293ee8fdc
+-	Star Rating Gauge
+<img width="495" height="248" alt="Image - Star Rating Gauge" src="https://github.com/user-attachments/assets/010214f7-2a85-4f62-ad6d-301c19609599" />
 
-- Linked Charts - Rectangular Brush - Scatter Chart and Bar Chart
+-	Thermometer Gauge
+<img width="726" height="589" alt="Image - Thermometer Gauge" src="https://github.com/user-attachments/assets/b600e1f0-213f-4825-af87-dcbfc4c4958b" />
 
-https://github.com/user-attachments/assets/deb1f00d-2440-412f-94a2-b0017778ef75
+-	Inset Chart – Similar Data
+<img width="1310" height="687" alt="Image - Inset Chart - Similar Data" src="https://github.com/user-attachments/assets/352b486c-be27-488d-80fd-cdf9fffa5801" />
 
-- Linked Charts - Area Brush - Scatter Chart and Top 20 Table
-
-https://github.com/user-attachments/assets/5864bc57-66f1-4a7f-89a5-50ea68042299
+-	Inset Chart – Outlier Data
+<img width="1379" height="684" alt="Image - Inset Chart - Outlier Data" src="https://github.com/user-attachments/assets/86aff8d2-8825-4f80-97a8-522ccb51ab45" />
 
 *eof*
