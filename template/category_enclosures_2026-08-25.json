@@ -1,0 +1,352 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "ea6c8c6b-b08c-4c04-97a7-402a0daa0895",
+      "generated": "2026-08-25T14:59:55.974Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Category Enclosures",
+      "description": "Survey data presented as a subcategory bar chart within category enclosures; positive, negative, and neutral bars are coloured with Power BI sentiment colours",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"autosize\": {\r\n    \"type\": \"fit\",\r\n    \"contains\": \"padding\"\r\n  },\r\n  \"title\": {\r\n    \"font\": \"Segoe UI\",\r\n    \"fontSize\": 24,\r\n    \"fontWeight\": \"bold\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#4A4A4A\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 16,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#969696\"\r\n  },\r\n  \"axisX\": {\r\n    \"labels\": false,\r\n    \"ticks\": false,\r\n    \"domain\": false,\r\n    \"grid\": false,\r\n    \"title\": null\r\n  },\r\n  \"style\": {\r\n    \"_category_bar_style\": {\r\n      \"cornerRadius\": 8\r\n    },\r\n    \"_category_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 32,\r\n      \"fontWeight\": \"bold\",\r\n      \"fontStyle\": \"normal\",\r\n      \"color\": \"#303030\"\r\n    },\r\n    \"_category_percent_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 32,\r\n      \"fontWeight\": \"bold\",\r\n      \"fontStyle\": \"normal\",\r\n      \"color\": \"#303030\"\r\n    },\r\n    \"_subcategory_bar_style\": {\r\n      \"cornerRadius\": 8\r\n    },\r\n    \"_subcategory_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 16,\r\n      \"fontWeight\": \"normal\",\r\n      \"fontStyle\": \"italic\",\r\n      \"color\": \"#575757\"\r\n    },\r\n    \"_subcategory_percent_text_style\": {\r\n      \"font\": \"Segoe UI\",\r\n      \"fontSize\": 16,\r\n      \"fontWeight\": \"bold\",\r\n      \"fontStyle\": \"italic\",\r\n      \"color\": \"#575757\"\r\n    }\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Category ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__1__",
+        "name": "Category",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__2__",
+        "name": "Subcategory ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__3__",
+        "name": "Subcategory",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__4__",
+        "name": "Percent",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Category Enclosures",
+    "author": "Greg Philps",
+    "date": "2026-08-25",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.157.879.0",
+    "description": "Survey data presented as a subcategory bar chart within category enclosures; positive and negative bars are coloured while neutral bars are in greeyscale",
+    "notes": "",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "offset": 20,
+    "text": "Deneb Category Enclosures",
+    "subtitle": "Synthetic Survey Data"
+  },
+  // standard Power BI dataset  
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_category_id"
+    },
+    {
+      "calculate": "datum['__1__']",
+      "as": "_category"
+    },
+    {
+      "calculate": "datum['__2__']",
+      "as": "_subcategory_id"
+    },
+    {
+      "calculate": "datum['__3__']",
+      "as": "_subcategory"
+    },
+    {
+      "calculate": "datum['__4__']",
+      "as": "_percent"
+    },
+    // compose composite id
+    {
+      "calculate": "( datum['_category_id'] * 100 ) + ( datum['_subcategory_id'] * 1 )",
+      "as": "_composite_id"
+    }
+  ],
+  // shared encoding to apply to all layered marks
+  "encoding": {
+    "y": {
+      "field": "_composite_id",
+      "type": "nominal",
+      "axis": null
+    },
+    "x": {
+      "field": "_percent",
+      "type": "quantitative"
+    }
+  },
+  "layer": [
+    {
+      "name": "CATEGORY",
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "min",
+              "field": "_composite_id",
+              "as": "_composite_id_min"
+            },
+            {
+              "op": "max",
+              "field": "_composite_id",
+              "as": "_composite_id_max"
+            },
+            {
+              "op": "sum",
+              "field": "_percent",
+              "as": "_category_percent"
+            }
+          ],
+          "groupby": [
+            "_category_id"
+          ]
+        },
+        // adjust neutral value to suit dataset
+        {
+          "filter": "datum['_category'] != 'Neutral'"
+        },
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "_subcategory_id_rank"
+            }
+          ],
+          "groupby": [
+            "_category_id"
+          ],
+          "sort": [
+            {
+              "field": "_subcategory_id",
+              "order": "ascending"
+            }
+          ]
+        },
+        {
+          "filter": "datum['_subcategory_id_rank'] == 1"
+        }
+      ],
+      "layer": [
+        {
+          "name": "CATEGORY_BAR",
+          "mark": {
+            "type": "rect",
+            "yOffset": -49,
+            "y2Offset": 49,
+            "color": {
+              "expr": "datum['_category'] == 'Positive' ? pbiColor('positive') : pbiColor('negative')"
+            },
+            "opacity": 0.3, // adjust opacity (transparency) as desired
+            "style": "_category_bar_style"
+          },
+          "encoding": {
+            // hard-code X values to fill container width
+            "x": {
+              "value": {
+                "expr": "0"
+              }
+            },
+            "x2": {
+              "value": {
+                "expr": "width"
+              }
+            },
+            "y": {
+              "field": "_composite_id_min"
+            },
+            "y2": {
+              "field": "_composite_id_max"
+            }
+          }
+        },
+        {
+          "name": "CATEGORY_LABEL",
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "angle": 270,
+            "yOffset": 50,
+            "style": "_category_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_category"
+            },
+            "x": {
+              "datum": -0.12
+            }
+          }
+        },
+        {
+          "name": "CATEGORY_PERCENT",
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "yOffset": 50,
+            "style": "_category_percent_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_category_percent",
+              "formatType": "pbiFormat",
+              // adjust Power BI format string as desired
+              "format": "#%"
+            },
+            "x": {
+              "datum": 0.44
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SUBCATEGORY",
+      "layer": [
+        {
+          "name": "SUBCATEGORY_BAR",
+          "transform": [
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_subcategory_rank_asc"
+                }
+              ],
+              "groupby": [
+                "_category"
+              ],
+              "sort": [
+                {
+                  "field": "_subcategory_id",
+                  "order": "ascending"
+                }
+              ]
+            },
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "_subcategory_rank_desc"
+                }
+              ],
+              "groupby": [
+                "_category"
+              ],
+              "sort": [
+                {
+                  "field": "_subcategory_id",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "calculate": "datum['_category'] == 'Positive' ? datum['_subcategory_rank_asc'] : datum['_category'] == 'Negative' ? datum['_subcategory_rank_desc'] : 1",
+              "as": "_subcategory_opacity"
+            },
+            {
+              "calculate": "1 - ( datum['_subcategory_opacity'] * 0.4 )",
+              "as": "_subcategory_opacity"
+            }
+          ],
+          "mark": {
+            "type": "bar",
+            "height": {
+              "band": 0.7
+            },
+            "color": {
+              "expr": "datum['_category'] == 'Positive' ? pbiColor('positive') : datum['_category'] == 'Negative' ? pbiColor('negative') : pbiColor('neutral')"
+            },
+            "opacity": {
+              "expr": "datum['_subcategory_opacity']"
+            },
+            "style": "_subcategory_bar_style"
+          }
+        },
+        {
+          "name": "SUBCATEGORY_LABEL",
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "xOffset": -10,
+            "style": "_subcategory_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_subcategory"
+            },
+            "x": {
+              "datum": 0
+            }
+          }
+        },
+        {
+          "name": "SUBCATEGORY_PERCENT",
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "xOffset": 10,
+            "style": "_subcategory_percent_text_style"
+          },
+          "encoding": {
+            "text": {
+              "field": "_percent",
+              "formatType": "pbiFormat",
+              // adjust Power BI format string as desired
+              "format": "#%"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

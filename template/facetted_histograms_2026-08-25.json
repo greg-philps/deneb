@@ -1,0 +1,256 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "dec76b01-5db4-4000-ab75-676c5a3475eb",
+      "generated": "2026-08-25T15:18:18.707Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Facetted Histograms",
+      "description": "A facetted plot showing histograms (distributions) of both a category value (coloured; foreground) and the total value (grey; background)",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "1.9.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.1"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"autosize\": {\r\n    \"type\": \"fit\",\r\n    \"contains\": \"padding\"\r\n  },\r\n  \"title\": {\r\n    \"font\": \"Segoe UI\",\r\n    \"fontSize\": 24,\r\n    \"fontWeight\": \"bold\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#4A4A4A\",\r\n    \"subtitleFont\": \"Segoe UI\",\r\n    \"subtitleFontSize\": 16,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#969696\"\r\n  },\r\n  // facet headers\r\n  \"header\": {\r\n    \"titleFontSize\": 14,\r\n    \"titleFontWeight\": \"bold\",\r\n    \"titleFontStyle\": \"italic\",\r\n    \"titleColor\": \"#252525\",\r\n    \"labelFontSize\": 18,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"italic\",\r\n    \"labelColor\": \"#252525\"\r\n  },\r\n  // use the same values for both the X and Y axes for both charts\r\n  \"axis\": {\r\n    \"ticks\": true,\r\n    \"domain\": true,\r\n    \"domainColor\": \"#3D3D3D\",\r\n    \"grid\": true,\r\n    \"gridColor\": \"#EEEEEE\",\r\n    \"titleFont\": \"Segoe UI\",\r\n    \"titleFontSize\": 14,\r\n    \"titleFontWeight\": \"normal\",\r\n    \"titleFontStyle\": \"italic\",\r\n    \"titleColor\": \"#252525\",\r\n    \"labelFont\": \"Segoe UI\",\r\n    \"labelFontSize\": 12,\r\n    \"labelFontWeight\": \"normal\",\r\n    \"labelFontStyle\": \"italic\",\r\n    \"labelColor\": \"#7D7D7D\"\r\n  }\r\n}",
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Category",
+        "description": "",
+        "kind": "column",
+        "type": "text"
+      },
+      {
+        "key": "__1__",
+        "name": "Bin ID",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__2__",
+        "name": "Bin Min",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__3__",
+        "name": "Bin Max",
+        "description": "",
+        "kind": "column",
+        "type": "numeric"
+      },
+      {
+        "key": "__4__",
+        "name": "Category Rows",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      },
+      {
+        "key": "__5__",
+        "name": "Total Rows",
+        "description": "",
+        "kind": "measure",
+        "type": "numeric"
+      }
+    ]
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Facetted Historgrams",
+    "author": "Greg Philps",
+    "date": "2026-08-25",
+    "deneb version": "1.9.1",
+    "power bi desktop version": "2.157.879.0",
+    "description": "A facetted plot showing histograms (distributions) of both a category value (coloured; foreground) and the total value (grey; background)",
+    "notes": "",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "offset": 20,
+    "text": "Deneb Facetted Historgrams",
+    "subtitle": [
+      "Category vs. Total",
+      "Data Source: Vega/Vega-Lite sample data - Penguins dataset"
+    ]
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__0__']",
+      "as": "_category"
+    },
+    {
+      "calculate": "datum['__1__']",
+      "as": "_bin_id"
+    },
+    {
+      "calculate": "datum['__2__']",
+      "as": "_bin_min"
+    },
+    {
+      "calculate": "datum['__3__']",
+      "as": "_bin_max"
+    },
+    {
+      "calculate": "datum['__4__']",
+      "as": "_category_value"
+    },
+    {
+      "calculate": "datum['__5__']",
+      "as": "_total_value"
+    }
+  ],
+  "spacing": 20, // adjust facet spacing (pixels) as desired
+  "facet": {
+    "column": {
+      "field": "_category",
+      "type": "nominal",
+      "header": {
+        "title": "__0__" // adjust to suit dataset; set to [null] to remove
+      }
+    }
+  },
+  "spec": {
+    "width": 300,
+    "height": 580,
+    "layer": [
+      {
+        "name": "TOTAL",
+        "mark": {
+          "type": "bar",
+          "color": "#C9C9C9"
+        },
+        "encoding": {
+          "x": {
+            "field": "_bin_min",
+            "type": "quantitative",
+            "bin": {
+              "binned": true, // dataset is pre-binned in Power BI
+              "step": 1000 // adjust axis label spacing as desired
+            },
+            "axis": {
+              "title": "Body Mass (g)"
+            }
+          },
+          "x2": {
+            "field": "_bin_max"
+          },
+          "y": {
+            "field": "_total_value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Count",
+              "tickCount": 10 // adjust to suit dataset
+            }
+          }
+        }
+      },
+      {
+        "name": "SPECIES",
+        "transform": [
+          {
+            "calculate": "datum['_bin_min'] + '-' + datum['_bin_max']",
+            "as": "_bin_range"
+          },
+          {
+            "calculate": "datum['_category_value'] / datum['_total_value']",
+            "as": "_category_percent"
+          }
+        ],
+        "mark": {
+          "type": "bar",
+          "opacity": 0.75,
+          "tooltip": true
+        },
+        "encoding": {
+          "x": {
+            "field": "_bin_min",
+            "type": "quantitative",
+            "bin": {
+              "binned": true, // dataset is pre-binned in Power BI
+              "step": 1000 // adjust axis label spacing as desired
+            },
+            "scale": {
+              "domain": [
+                2000,
+                7000
+              ]
+            }
+          },
+          "x2": {
+            "field": "_bin_max"
+          },
+          "y": {
+            "field": "_category_value",
+            "type": "quantitative"
+          },
+          "color": {
+            "field": "_category",
+            "type": "nominal",
+            "scale": {
+              "range": [
+                // adjust colours as desired
+                "#0F4C81", // blue
+                "#1E5E08", // green
+                "#B71021" // red
+              ]
+            },
+            "legend": null
+          },
+          "tooltip": [
+            {
+              "field": "_category",
+              "type": "nominal",
+              "title": "__0__" // adjust to suit dataset
+            },
+            {
+              "field": "_bin_range",
+              "type": "nominal",
+              "title": "Bin"
+            },
+            {
+              "field": "_category_value",
+              "type": "quantitative",
+              "title": "__4__" // adjust to suit dataset
+            },
+            {
+              "field": "_total_value",
+              "type": "quantitative",
+              "title": "__5__"
+            },
+            {
+              "field": "_category_percent",
+              "type": "quantitative",
+              "title": "Percent of Total",
+              "formatType": "pbiFormat",
+              // adjust Power BI format string as desired
+              "format": "#%"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
