@@ -1,0 +1,388 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "usermeta": {
+    "information": {
+      "uuid": "36133bb3-3082-45e6-8f87-2184ddb0f979",
+      "generated": "2026-10-13T18:17:39.472Z",
+      "previewImageBase64PNG": "data:image/png;base64,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",
+      "name": "Facetted Waffle Chart",
+      "description": "A small multiples collection of waffle charts, or a facetted waffle chart. Positive percentage variances are displayed above the baseline and negative percentage variances are displayed below the baseline. Circles are coloured with Power BI theme sentiment colours.",
+      "author": "Greg Philps"
+    },
+    "deneb": {
+      "build": "2.0.0",
+      "metaVersion": 2,
+      "provider": "vegaLite",
+      "providerVersion": "6.4.3"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "contextMenuSelector": true,
+      "selection": false,
+      "selectionMode": "simple",
+      "highlight": false,
+      "dataPointLimit": 50
+    },
+    "config": "{\r\n  \"view\": {\r\n    \"stroke\": null\r\n  },\r\n  \"autosize\": {\r\n    \"type\": \"fit\",\r\n    \"contains\": \"padding\"\r\n  },\r\n  \"font\": \"Segoe UI\",\r\n  \"title\": {\r\n    \"fontSize\": 24,\r\n    \"fontWeight\": \"bold\",\r\n    \"fontStyle\": \"italic\",\r\n    \"color\": \"#4A4A4A\",\r\n    \"subtitleFontSize\": 16,\r\n    \"subtitleFontWeight\": \"normal\",\r\n    \"subtitleFontStyle\": \"italic\",\r\n    \"subtitleColor\": \"#969696\"\r\n  },\r\n  // facet header\r\n  \"header\": {\r\n    \"labelFontSize\": 18,\r\n    \"labelFontWeight\": \"bold\",\r\n    \"labelFontStyle\": \"italic\",\r\n    \"labelColor\": \"#575757\"\r\n  },\r\n  \"style\": {\r\n    \"_x_axis_separator_rule_style\": {\r\n      \"color\": \"#3D3D3D\"\r\n    },\r\n    \"_divider_rule_style\": {\r\n      \"strokeWidth\": 1,\r\n      \"color\": \"#A3A3A3\"\r\n    },\r\n    \"_variance_note_rect_style\": {\r\n      \"cornerRadius\": 8,\r\n      \"color\": \"#E3E3E3\",\r\n      \"opacity\": 0.5\r\n    },\r\n    \"_variance_note_text_style\": {\r\n      \"fontSize\": 30,\r\n      \"fontWeight\": \"bold\",\r\n      \"fontStyle\": \"normal\",\r\n      \"fill\": \"black\",\r\n      \"stroke\": \"white\"\r\n    }\r\n  }\r\n}",
+    "datasets": {
+      "dataset": [
+        {
+          "key": "__dataset.0__",
+          "name": "Category",
+          "description": "",
+          "kind": "column",
+          "type": "text",
+          "supportFieldConfiguration": {
+            "highlight": false,
+            "highlightStatus": false,
+            "highlightComparator": false,
+            "format": false,
+            "formatted": false,
+            "names": false
+          }
+        },
+        {
+          "key": "__dataset.1__",
+          "name": "Current Period Value",
+          "description": "",
+          "kind": "measure",
+          "type": "numeric"
+        },
+        {
+          "key": "__dataset.2__",
+          "name": "Previous Period Value",
+          "description": "",
+          "kind": "measure",
+          "type": "numeric"
+        }
+      ]
+    }
+  },
+  /*
+  "usermeta": {
+    "title": "Deneb Facetted Waffle Chart",
+    "author": "Greg Philps",
+    "date": "2026-10-13",
+    "deneb version": "2.0.0",
+    "power bi desktop version": "2.158.1304",
+    "description": "A small multiples collection of waffle charts, or a facetted waffle chart. Positive percentage variances are displayed above the baseline while negative percentage variances are displayed below. A screen widget allows provides interactivity and allows the user to select the desired sort order.",
+    "notes": "",
+    "template notes": "usermeta object is used by the Deneb template generation process and is thus overwritten, hence added here as a comment"
+  },
+  */
+  "title": {
+    "anchor": "start",
+    "align": "left",
+    "offset": 20,
+    "text": "Deneb Facetted Waffle Chart",
+    "subtitle": [
+      "Variance Percent of Current Year Sales over Previous Year Sales by Country",
+      "Synthetic Sales Data"
+    ]
+  },
+  // standard Power BI dataset
+  "data": {
+    "name": "dataset"
+  },
+  "transform": [
+    // assign internal names to dataset fields
+    {
+      "calculate": "datum['__dataset.0__']",
+      "as": "_category"
+    },
+    {
+      "calculate": "datum['__dataset.1__']",
+      "as": "_value_cy"
+    },
+    {
+      "calculate": "datum['__dataset.2__']",
+      "as": "_value_py"
+    },
+    // round values
+    {
+      "calculate": "toNumber( format( datum['_value_cy'], '.0f' ) )",
+      "as": "_value_cy"
+    },
+    {
+      "calculate": "toNumber( format( datum['_value_py'], '.0f' ) )",
+      "as": "_value_py"
+    },
+    // determine variance
+    {
+      "calculate": "datum['_value_cy'] - datum['_value_py']",
+      "as": "_value_variance"
+    },
+    {
+      "calculate": "datum['_value_variance'] / datum['_value_py']",
+      "as": "_value_variance_percent_decimal"
+    },
+    {
+      "calculate": "100 * datum['_value_variance_percent_decimal']",
+      "as": "_value_variance_percent"
+    },
+    // determine rank
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "_value_variance_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "_value_variance_percent",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "_category_name_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "_category",
+          "order": "ascending"
+        }
+      ]
+    },
+    {
+      "calculate": "_category_sort == 'Name' ? datum['_category_name_rank'] : datum['_value_variance_rank']",
+      "as": "_category_display_rank"
+    },
+    // create composite label
+    {
+      "calculate": "pad( datum['_category_display_rank'], 2, '0', 'left' ) + '-' + datum['_category']",
+      "as": "_category_label"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "_category_display_rank",
+          "as": "_max_category_display_rank"
+        }
+      ]
+    },
+    // create 1-100 array and use [flatten] transform to create 1-100 records for each category
+    {
+      "calculate": "[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100]",
+      "as": "_sequence"
+    },
+    {
+      "flatten": [
+        "_sequence"
+      ]
+    },
+    {
+      "calculate": "ceil( datum['_sequence'] / 10 )",
+      "as": "_row"
+    },
+    {
+      "calculate": "datum['_value_variance_percent'] < 0 ? -1 * datum['_row'] : datum['_row']",
+      "as": "_signed_row"
+    },
+    {
+      "calculate": "datum['_sequence'] - ( ( datum['_row'] - 1 ) * 10 )",
+      "as": "_column"
+    }
+  ],
+  "params": [
+    {
+      "name": "_category_sort",
+      "value": "Rank",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Name",
+          "Rank"
+        ],
+        // adjust parameter display name to suit dataset
+        "name": "Country Sort: "
+      }
+    }
+  ],
+  "spacing": 1,
+  "facet": {
+    "column": {
+      "field": "_category_label",
+      "header": {
+        "orient": "top",
+        "title": null,
+        "labelExpr": "slice( datum.value, 3, 100 )"
+      }
+    }
+  },
+  "spec": {
+    "width": 210,
+    "height": 450,
+    "layer": [
+      {
+        "name": "WAFFLE",
+        "transform": [
+          {
+            // use Power BI theme sentiment colours 
+            // adjust colours as desired
+            "calculate": "datum['_value_variance_percent'] > 0 && datum['_value_variance_percent'] >= datum['_sequence'] ? pbiColor('positive') : datum['_value_variance_percent'] < 0 && abs( datum['_value_variance_percent'] ) >= datum['_sequence'] ? pbiColor('negative') : pbiColor('neutral')",
+            "as": "_cell_colour"
+          }
+        ],
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "size": 160,
+          "shape": "circle",
+          "opacity": 0.5
+        },
+        "encoding": {
+          "x": {
+            "field": "_column",
+            "type": "quantitative",
+            "axis": null
+          },
+          "y": {
+            "field": "_signed_row",
+            "type": "quantitative",
+            "axis": null,
+            "scale": {
+              "domain": [
+                -10,
+                10
+              ]
+            }
+          },
+          "color": {
+            "field": "_cell_colour",
+            "type": "nominal",
+            // add scale/null to use dataset colours
+            "scale": null
+          }
+        }
+      },
+      {
+        "name": "AXIS_SEPARATOR_RULE",
+        "mark": {
+          "type": "rule",
+          "style": "_x_axis_separator_rule_style"
+        },
+        "encoding": {
+          "x": {
+            "datum": 0.5
+          },
+          "x2": {
+            "datum": 10.5
+          },
+          "y": {
+            "datum": 0
+          }
+        }
+      },
+      {
+        "name": "VARIANCE_NOTE_BACKGROUND_RECTANGLE",
+        "transform": [
+          // only keep a single record
+          {
+            "filter": "datum['_sequence'] == 1"
+          },
+          {
+            "calculate": "datum['_value_variance_percent'] < 0 ? -9 : 10",
+            "as": "_label_y"
+          }
+        ],
+        "mark": {
+          "type": "rect",
+          "align": "center",
+          "width": 80,
+          "height": 40,
+          "xOffset": 8,
+          "yOffset": 10,
+          "style": "_variance_note_rect_style"
+        },
+        "encoding": {
+          "x": {
+            "datum": 5
+          },
+          "y": {
+            "field": "_label_y",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "name": "VARIANCE_NOTE_VALUE",
+        "transform": [
+          // only keep a single record
+          {
+            "filter": "datum['_sequence'] == 1"
+          },
+          // use [floor] for positive and [ceil] for negative
+          {
+            "calculate": "datum['_value_variance_percent'] >= 0 ? floor( datum['_value_variance_percent'] ) : ceil( datum['_value_variance_percent'] )",
+            "as": "_value_variance_percent"
+          },
+          {
+            "calculate": "datum['_value_variance_percent'] / 100",
+            "as": "_value_variance_percent_decimal"
+          },
+          {
+            "calculate": "datum['_value_variance_percent'] < 0 ? -9 : 10",
+            "as": "_label_y"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "xOffset": 8,
+          "yOffset": 12,
+          "style": "_variance_note_text_style"
+        },
+        "encoding": {
+          "text": {
+            "field": "_value_variance_percent_decimal",
+            "type": "quantitative",
+            "formatType": "pbiFormat",
+            // adjust Power BI format string as desired
+            "format": "0%"
+          },
+          "x": {
+            "datum": 5
+          },
+          "y": {
+            "field": "_label_y",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "name": "DIVIDER",
+        "transform": [
+          {
+            "filter": "datum['_sequence'] == 1 && datum['_category_display_rank'] < datum['_max_category_display_rank']"
+          }
+        ],
+        "mark": {
+          "type": "rule",
+          "style": "_divider_rule_style"
+        },
+        "encoding": {
+          "x": {
+            "datum": 11
+          },
+          "y": {
+            "datum": -10
+          },
+          "x2": {
+            "datum": 11
+          },
+          "y2": {
+            "datum": 10
+          }
+        }
+      }
+    ]
+  }
+}
