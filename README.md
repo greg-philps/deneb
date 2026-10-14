@@ -9,15 +9,15 @@ A collection of Deneb templates using the Vega-Lite language
 
 - Population Pyramid
 
-<<< LINK TO VIDEO TO BE ADDED >>>
+https://github.com/user-attachments/assets/ae912b8b-854c-4ff0-879c-13d484809cc4
 
 - Facetted Waffle Chart
 
-<<< LINK TO VIDEO TO BE ADDED >>>
+https://github.com/user-attachments/assets/6077d63c-7c8a-465c-8170-6db1ba6979c7
 
 - Facetted Bar Chart
 
-<<< LINK TO VIDEO TO BE ADDED >>>
+https://github.com/user-attachments/assets/4e6eefc7-c11d-470e-9d41-8b18e3dcdba1
 
 ## 2026-08-26
 
