@@ -5,6 +5,20 @@ A collection of Deneb templates using the Vega-Lite language
 
 <br>
 
+## 2026-10-13
+
+- Population Pyramid
+
+<<< LINK TO VIDEO TO BE ADDED >>>
+
+- Facetted Waffle Chart
+
+<<< LINK TO VIDEO TO BE ADDED >>>
+
+- Facetted Bar Chart
+
+<<< LINK TO VIDEO TO BE ADDED >>>
+
 ## 2026-08-26
 
 - Distributions
